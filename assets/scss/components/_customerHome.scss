@@ -1,0 +1,66 @@
+﻿.customerHome {
+  .container-fluid {
+    padding: 0px;
+
+    .owl-nav {
+      button {
+        display: none;
+      }
+    }
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+
+    height: 141px;
+    background-color: $lightgrey;
+
+    span {
+      padding-right: 23px;
+    }
+
+    h2 {
+      color: $grey;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      font-weight: 700;
+      padding-right: 23px;
+      font-size: 1.083rem;
+    }
+  }
+  .owl-carousel {
+    @extend %default-content;
+    width: 100%;
+    height: auto;
+    .owl-stage {
+      @include flexbox;
+      @include flex-direction(row);
+
+      .p-item {
+        display: inline-block;
+
+        a {
+          position: relative;
+
+          img {
+            float: left;
+            width: 100%;
+            height: auto;
+          }
+          &:hover {
+            .p-text {
+              i {
+                color: $orange;
+              }
+              h3 {
+                color: $orange;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

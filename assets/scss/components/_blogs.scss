@@ -1,0 +1,181 @@
+.blogs {
+  h2 {
+    margin-top: 57px;
+    font-size: 1.611rem;
+    font-weight: 500;
+    color: $grey;
+  }
+  .crousel {
+    position: relative;
+    .slide {
+      height: auto;
+      padding-top: 47px;
+      padding-bottom: 10px;
+      .box {
+        @extend %default-content;
+        width: 100%;
+        background-color: $white;
+        @include border-radius(10px);
+        overflow: hidden;
+        // @include box-shadow(1px 1px 4px 0px rgba(0, 0, 0, 0.15));
+        .Image {
+          @extend %default-content;
+          width: 100%;
+          overflow: hidden;
+          a {
+            @extend %default-content;
+            width: 100%;
+            img {
+              @extend %default-content;
+              width: 100%;
+              @include transform(scale3d(1, 1, 1));
+              @include transition(transform 500ms ease-in-out);
+            }
+            &:hover {
+              img {
+                @include transform(scale3d(1.1, 1.1, 1.1));
+              }
+            }
+          }
+        }
+        .Text {
+          @extend %default-content;
+          width: 100%;
+          padding-top: 28px;
+          padding-bottom: 21px;
+          // padding: 20px 24px;
+          // padding: 20px 24px;
+          h3 {
+            padding-right: 40px;
+            @extend %default-content;
+            width: 100%;
+            min-height: 68px;
+            font-size: 1.563rem;
+            font-weight: 400;
+            // line-height: 1.891;
+
+            color: $grey;
+            margin: 0;
+            // padding-bottom: 18px;
+            position: relative;
+            margin-bottom: 23px;
+            @include small-breakpoint(max) {
+              font-size: 0.9rem;
+              padding-bottom: 10px;
+              min-height: 56px;
+            }
+            &::after {
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 33px;
+              height: 4px;
+              background-color: $red;
+            }
+          }
+          .info {
+            @extend %default-content;
+            width: 100%;
+            padding-bottom: 10px;
+            span {
+              @extend %default-content;
+              font-size: 0.7rem;
+              font-weight: 400;
+              line-height: 1.4;
+              color: $red;
+              @include small-breakpoint(max) {
+                font-size: 0.6rem;
+              }
+              &::before {
+                font-size: 16px;
+                margin-right: 6px;
+                @include small-breakpoint(max) {
+                  font-size: 13px;
+                }
+              }
+              &.date {
+                padding-right: 5px;
+              }
+            }
+          }
+          p {
+            @extend %default-content;
+            width: 100%;
+            font-size: 13px;
+            font-weight: 400;
+            // line-height: 1.5;
+
+            color: $grey;
+            padding: 0;
+            margin: 0;
+            @include small-breakpoint(max) {
+              font-size: 0.8rem;
+            }
+          }
+          a {
+            @extend %default-content;
+            width: auto;
+            font-size: 0.75rem;
+            font-weight: 400;
+            line-height: 1.4;
+            text-decoration: solid underline $grey;
+            color: $grey2;
+            margin-top: 15px;
+            &::after {
+              font-size: 13px;
+            }
+            &:hover {
+              color: $darkgrey;
+            }
+          }
+        }
+      }
+    }
+    .seeAll {
+      text-align: center;
+      a {
+        color: $blue;
+        text-align: center;
+        text-decoration: solid underline $blue;
+      }
+    }
+    // .slick-arrow {
+    //   position: absolute;
+    //   top: 50%;
+    //   width: 18px;
+    //   height: 54px;
+    //   margin-top: -27px;
+    //   overflow: hidden;
+    //   z-index: 10;
+    //   background: transparent;
+    //   &::before {
+    //     position: absolute;
+    //     left: 0;
+    //     top: 0;
+    //     font-size: 28px;
+    //     margin: 0;
+    //     color: $lightgrey;
+    //     @include transition(color 0.5s ease-in-out);
+    //   }
+    //   &:hover {
+    //     &::before {
+    //       color: $red;
+    //     }
+    //   }
+    // }
+    // .slick-prev {
+    //   left: -20px;
+    //   &::before {
+    //     font-family: $icon-font;
+    //     content: "\e806";
+    //   }
+    // }
+    // .slick-next {
+    //   right: -25px;
+    //   &::before {
+    //     font-family: $icon-font;
+    //     content: "\e805";
+    //   }
+    // }
+  }
+}

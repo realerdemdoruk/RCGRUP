@@ -1,0 +1,1189 @@
+// header
+header {
+  position: fixed;
+  left: 0;
+
+  top: 0;
+  width: 100%;
+  z-index: 9998;
+  @include transition(all 0.5s ease-in-out);
+  background: $white;
+  @include box-shadow(1px 1px 4px 0px rgba(0, 0, 0, 0.15));
+  @include breakpoint("600px") {
+    border-top: 1px solid $darkblue;
+  }
+
+  // .container-fluid {
+  // background-color: red !important;
+  // }
+  .topCapsule {
+    @extend %default-content;
+    width: 100%;
+    border-bottom: 1px solid rgba($white, 0.3);
+    @include transition(all 0.5s ease-in-out);
+
+    @include large-breakpoint("max") {
+      display: none;
+    }
+    .sticky & {
+      padding-top: 0px;
+      margin-top: -48px;
+    }
+    .topMenu {
+      padding-top: 8px;
+      .slogan {
+        @extend %default-content;
+      }
+      .social {
+        @extend %default-content;
+        letter-spacing: -5px;
+        margin-top: 8px;
+        a.social {
+          letter-spacing: 0px;
+          display: inline-block;
+          vertical-align: middle;
+          width: auto;
+          height: 20px;
+          margin: 0 10px;
+          text-align: center;
+          &::before {
+            display: inline-block;
+            width: auto;
+            color: $white;
+            font-size: 14px;
+            line-height: 20px;
+            @include transition(color 0.5s ease-in-out);
+            margin: 0;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+          &:hover {
+            &::before {
+              // color: $red;
+              color: $lightblue;
+            }
+          }
+        }
+      }
+      .search {
+        @extend %default-content;
+        position: relative;
+        padding: 9px 25px 9px 0;
+        margin: 0 25px 0 0;
+        border-right: 1px solid rgba($white, 0.3);
+        z-index: 10;
+        a {
+          @extend %default-content;
+          vertical-align: middle;
+          font-size: 1rem;
+          line-height: 1.5;
+          font-weight: 400;
+          color: $white;
+          margin: 2px 0px;
+          span {
+            @extend %default-content;
+            vertical-align: middle;
+            margin: 0px 1px;
+          }
+          &::before {
+            margin: 0;
+          }
+          &:hover {
+            // color: $red;
+            color: $lightblue;
+          }
+        }
+        &:hover {
+          .menu {
+            display: block;
+          }
+        }
+      }
+      .language {
+        @extend %default-content;
+        position: relative;
+        padding: 9px 25px 9px 0;
+        margin: 0 25px 0 0;
+        border-right: 1px solid rgba($white, 0.3);
+        z-index: 10;
+        a {
+          @extend %default-content;
+          vertical-align: middle;
+          font-size: 0.8rem;
+          line-height: 1.5;
+          font-weight: 400;
+          color: $white;
+          span {
+            @extend %default-content;
+            vertical-align: middle;
+            margin: 0px 1px;
+          }
+          &::after {
+            display: inline-block;
+            vertical-align: middle;
+            width: 10px;
+            font-size: 14px;
+            margin: 0;
+          }
+          &:hover {
+            // color: $red;
+            color: $lightblue;
+          }
+        }
+        .menu {
+          position: absolute;
+          left: 0px;
+          top: 100%;
+          width: 80px;
+          background-color: rgba($white, 0.9);
+          display: none;
+          padding: 0px;
+          @include border-radius(5px);
+          text-align: center;
+          &::before {
+            content: "";
+            border-style: solid;
+            border-color: rgba(0, 0, 0, 0) rgba($white, 0.9) rgba(0, 0, 0, 0)
+              rgba(0, 0, 0, 0);
+            height: 0;
+            position: absolute;
+            width: 0;
+            border-width: 6px 6px 6px 0;
+            right: 20px;
+            top: -8px;
+            @include rotate(90);
+          }
+          a {
+            @extend %default-content;
+            width: 100%;
+            border-bottom: 1px solid rgba($darkgrey, 0.6);
+            padding: 5px;
+            font-size: 0.7rem;
+            line-height: 1.5;
+            margin-right: 0px;
+            font-weight: 400;
+            color: $darkgrey;
+            &:last-child {
+              border: 0px;
+            }
+            &:hover {
+              color: rgba($darkgrey, 0.6);
+            }
+          }
+        }
+        &:hover {
+          .menu {
+            display: block;
+          }
+        }
+      }
+      .infoBt {
+        @extend %default-content;
+        position: relative;
+        padding: 9px 25px 9px 0;
+        margin: 0 25px 0 0;
+        border-right: 1px solid rgba($white, 0.3);
+        z-index: 10;
+        a {
+          @extend %default-content;
+          vertical-align: middle;
+          font-size: 0.8rem;
+          line-height: 1.5;
+          font-weight: 400;
+          color: $white;
+          &:hover {
+            // color: $red;
+            color: $lightblue;
+          }
+        }
+      }
+      .logos {
+        @extend %default-content;
+        position: relative;
+        padding: 4px 25px 4px 0;
+        margin: 0 25px 0 0;
+        border-right: 1px solid rgba($white, 0.3);
+        z-index: 10;
+        a {
+          @extend %default-content;
+          vertical-align: middle;
+          font-size: 0.8rem;
+          line-height: 1.5;
+          font-weight: 400;
+          color: $white;
+          img {
+            @extend %default-content;
+            width: 100%;
+            max-width: 116px;
+          }
+          &:hover {
+            // color: $red;
+            color: $lightblue;
+          }
+        }
+      }
+      @include medium-breakpoint("max") {
+        display: none;
+      }
+    }
+  }
+
+  .cvLink {
+    display: inline-block;
+    padding-top: 30px;
+    position: relative;
+    margin-top: 20px;
+    &::before {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      font-size: 21px;
+      margin: 0;
+      margin-left: -14px;
+      // color: $red;
+    }
+    a {
+      float: left;
+      font-size: 0.74rem;
+      line-height: 1;
+      color: $lightblue;
+      font-weight: 500;
+      // font-style: italic;
+      padding: 0px 8px;
+      border-right: 1px solid $lightblue;
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+        border: 0;
+      }
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+  .userNav {
+    background-color: red;
+  }
+
+  .icon-search {
+    color: white;
+    font-size: 15px;
+  }
+  .language {
+    @extend %default-content;
+    position: relative;
+    padding: 7px 0 7px 7px;
+    margin: 0;
+    z-index: 10;
+    a {
+      @extend %default-content;
+      vertical-align: middle;
+      font-size: 0.8rem;
+      line-height: 1.5;
+      font-weight: 500;
+      color: $white;
+      span {
+        @extend %default-content;
+        vertical-align: middle;
+        margin: 0px 1px;
+      }
+      &::after {
+        display: inline-block;
+        vertical-align: middle;
+        width: 10px;
+        font-size: 14px;
+        margin: 0;
+      }
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+    .menu {
+      position: absolute;
+      right: 0px;
+      top: 100%;
+      width: 80px;
+      background-color: rgba($black, 0.9);
+      display: none;
+      padding: 0px;
+      @include border-radius(5px);
+      text-align: center;
+      &::before {
+        content: "";
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0) rgba($black, 0.9) rgba(0, 0, 0, 0)
+          rgba(0, 0, 0, 0);
+        height: 0;
+        position: absolute;
+        width: 0;
+        border-width: 6px 6px 6px 0;
+        right: 20px;
+        top: -8px;
+        @include rotate(90);
+      }
+      a {
+        @extend %default-content;
+        width: 100%;
+        border-bottom: 1px solid rgba($white, 0.3);
+        padding: 5px;
+        // font-size: 0.7rem;
+        font-size: 0.7rem;
+        line-height: 1.5;
+        margin-right: 0px;
+        font-weight: 400;
+        color: $white;
+        &:last-child {
+          border: 0px;
+        }
+        &:hover {
+          opacity: 1;
+          // color: $red;
+          color: $lightblue;
+        }
+      }
+    }
+    &:hover {
+      .menu {
+        display: block;
+      }
+    }
+  }
+  .topRow {
+    padding: 0px;
+    border-bottom: 1px solid red;
+    // .container-fluid {
+    //   background-color: red !important;
+    // }
+    // border-bottom: 1px solid red;
+
+    span {
+      font-size: 17px;
+      color: #fff;
+      // margin: 0 10px;
+      // font-weight: 700;
+      // height: 80px;
+      // opacity: 0.2;
+    }
+
+    @include transition(all 0.5s ease-in-out);
+    position: relative;
+    z-index: 20;
+    background-color: $lightblue;
+    // padding-top: 10px;
+    // padding-bottom: 10px;
+
+    @include breakpoint("600px") {
+      display: none;
+    }
+
+    .sticky & {
+      margin-top: -44px;
+    }
+    .miniMenu {
+      display: inline-block;
+      letter-spacing: -5px;
+      span {
+        margin-right: 30px;
+      }
+      a {
+        display: inline-block;
+        vertical-align: middle;
+        // @extend %twoFont;
+        letter-spacing: 0;
+        // font-size: 1, 1669rem;
+        font-size: 1, 1669rem;
+        line-height: 1;
+        font-weight: 400;
+        color: $white;
+        margin-right: 13px;
+        // padding-left: 43px;
+        @include transition(all 0.5s ease-in-out);
+        &::before {
+          margin: 0 5px 0 0;
+        }
+        &:hover {
+          opacity: 0.3;
+        }
+      }
+    }
+    .social {
+      a {
+        display: inline-block;
+        vertical-align: middle;
+        @extend %twoFont;
+        letter-spacing: 0;
+        // font-size: 1, 1669rem;
+        // font-size: 8rem;
+        line-height: 1;
+        font-weight: 400;
+        color: $white;
+        margin-left: 20px;
+        @include transition(all 0.5s ease-in-out);
+        &::before {
+          margin: 0;
+        }
+        &:hover {
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+  .contentRow {
+    @include transition(all 0.5s ease-in-out);
+    position: relative;
+    z-index: 20;
+    .container {
+      @include medium-breakpoint("max") {
+        padding-right: 0;
+      }
+    }
+
+    .middle-xs {
+      justify-content: space-between;
+    }
+    .navCapsule {
+      position: relative;
+      z-index: 5;
+      @include transition(padding 0.5s ease-in-out);
+      .row {
+        .logo {
+          display: inline-block;
+          vertical-align: middle;
+          width: auto;
+          height: 68px;
+          @include transition(all 0.5s ease-in-out);
+          @include medium-breakpoint("max") {
+            height: 52px;
+          }
+          h1 {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+          }
+          a {
+            float: left;
+            width: 188px;
+            height: 72px;
+            @include transition(all 0.5s ease-in-out);
+            background: {
+              image: url(/assets/images/logo.png);
+              size: cover;
+              repeat: no-repeat;
+            }
+            text-indent: -9999px;
+            @include medium-breakpoint("max") {
+              width: 118px;
+              height: 52px;
+            }
+
+            &:hover {
+              opacity: 0.9;
+            }
+          }
+          .sticky & {
+            height: 52px;
+            a {
+              width: 120px;
+              height: 45px;
+            }
+          }
+        }
+
+        ul.nav {
+          display: inline-block;
+          vertical-align: bottom;
+
+          @include medium-breakpoint("max") {
+            display: none;
+          }
+          li {
+            @extend %default-content;
+            vertical-align: middle;
+            letter-spacing: 0px;
+            position: relative;
+            padding: 0 20px;
+            @include breakpoint("1400px") {
+              padding: 0 12px;
+            }
+            @include breakpoint("1200px") {
+              padding: 0 8px;
+            }
+            &.has-sub {
+              a {
+                &::after {
+                  padding-left: 4px;
+                  font-size: 9px;
+                }
+              }
+            }
+            a {
+              @extend %default-content;
+              vertical-align: middle;
+              font-size: 1, 1669rem;
+              line-height: 7.5;
+              color: $darkgrey;
+              font-weight: 600;
+              position: relative;
+
+              &:after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: initial;
+                bottom: 0px;
+                margin-left: -6px;
+                display: inline-block;
+                border-top: 6px solid transparent;
+                border-right: 6px solid transparent;
+                border-bottom: 6px solid transparent;
+                border-left: 6px solid transparent;
+                @include rotate(180);
+              }
+              &:hover,
+              &.active {
+                color: $lightblue;
+              }
+              .sticky & {
+                color: $black;
+                line-height: 6;
+                &:hover,
+                &.active {
+                  color: $lightblue;
+                }
+              }
+              @include breakpoint("1200px") {
+                font-size: 0.75rem;
+              }
+            }
+            .mega-menu {
+              position: absolute;
+              left: 0px;
+              top: 100%;
+              width: 250px;
+              background-color: rgba($white, 0.9);
+              display: none;
+              padding: 13px;
+              @include border-radius(12px);
+              text-align: center;
+              @include box-shadow(1px 1px 4px 0px rgba(0, 0, 0, 0.15));
+              .sticky & {
+                background-color: $lightgrey;
+              }
+              &::before {
+                content: "";
+                border-style: solid;
+                border-color: rgba(0, 0, 0, 0) rgba($white, 0.9)
+                  rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+                height: 0;
+                position: absolute;
+                width: 0;
+                border-width: 6px 6px 6px 0;
+                left: 30px;
+                top: -9px;
+                @include rotate(90);
+                .sticky & {
+                  border-color: rgba(0, 0, 0, 0) $lightgrey rgba(0, 0, 0, 0)
+                    rgba(0, 0, 0, 0);
+                }
+              }
+              &.show {
+                display: block;
+              }
+              ul {
+                @extend %default-content;
+                width: 100%;
+                padding: 0px;
+                margin: 0px;
+                li {
+                  @extend %default-content;
+                  width: 100%;
+                  border-bottom: 1px solid rgba($darkgrey, 0.1);
+                  padding: 0;
+                  margin: 0;
+                  &:last-child {
+                    border: 0;
+                  }
+                  a {
+                    @extend %default-content;
+                    width: 100%;
+                    font-size: 0.8rem;
+                    line-height: 2;
+                    font-weight: 500;
+                    color: $darkgrey;
+                    text-align: left;
+                    padding: 3px 6px;
+                    &:hover {
+                      color: $blue;
+                      // color: $darkred;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .miniNav {
+          display: flex !important;
+          align-items: center !important;
+          justify-content: space-between !important;
+
+          @extend %default-content;
+
+          @include medium-breakpoint(max) {
+            display: none;
+          }
+          .search {
+            @extend %default-content;
+            position: relative;
+            padding: 7px;
+            margin: 0;
+            z-index: 10;
+            a {
+              @extend %default-content;
+              vertical-align: middle;
+              font-size: 1rem;
+              line-height: 1.5;
+              font-weight: 400;
+              color: $white;
+              margin: 2px 0px;
+              span {
+                @extend %default-content;
+                vertical-align: middle;
+                margin: 0px 1px;
+              }
+              &::before {
+                margin: 0;
+              }
+              &:hover {
+                color: rgba($white, 0.5);
+              }
+            }
+            &:hover {
+              .menu {
+                display: block;
+              }
+            }
+          }
+          .language {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @extend %default-content;
+            position: relative;
+            padding: 7px 0 7px 7px;
+            margin: 0;
+            z-index: 10;
+            a {
+              @extend %default-content;
+              vertical-align: middle;
+              font-size: 0.8rem;
+              line-height: 1.5;
+              font-weight: 500;
+              color: $white;
+              span {
+                @extend %default-content;
+                vertical-align: middle;
+                margin: 0px 1px;
+              }
+              &::after {
+                display: inline-block;
+                vertical-align: middle;
+                width: 10px;
+                font-size: 14px;
+                margin: 0;
+              }
+              &:hover {
+                opacity: 0.6;
+              }
+            }
+            .menu {
+              position: absolute;
+              right: 0px;
+              top: 100%;
+              width: 80px;
+              background-color: rgba($black, 0.9);
+              display: none;
+              padding: 0px;
+              @include border-radius(5px);
+              text-align: center;
+              &::before {
+                content: "";
+                border-style: solid;
+                border-color: rgba(0, 0, 0, 0) rgba($black, 0.9)
+                  rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+                height: 0;
+                position: absolute;
+                width: 0;
+                border-width: 6px 6px 6px 0;
+                right: 20px;
+                top: -8px;
+                @include rotate(90);
+              }
+              a {
+                @extend %default-content;
+                width: 100%;
+                border-bottom: 1px solid rgba($white, 0.3);
+                padding: 5px;
+                font-size: 0.7rem;
+                line-height: 1.5;
+                margin-right: 0px;
+                font-weight: 400;
+                color: $white;
+                &:last-child {
+                  border: 0px;
+                }
+                &:hover {
+                  opacity: 1;
+                  color: $blue;
+                  // color: $red;
+                }
+              }
+            }
+            &:hover {
+              .menu {
+                display: block;
+              }
+            }
+          }
+        }
+
+        .Hamburger {
+          float: right;
+          position: relative;
+          display: none;
+          cursor: pointer;
+          background-color: transparent;
+          width: auto;
+          height: 72px;
+          padding: 16px 30px;
+          @include medium-breakpoint("max") {
+            display: inline-block;
+          }
+          div {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin: 5px 0;
+            @include transform(rotate(0deg));
+            @include transition(0.5s ease-in-out);
+            span {
+              display: block;
+              position: absolute;
+              height: 3px;
+              width: 100%;
+              background: $lightblue;
+              opacity: 1;
+              left: 0;
+              @include transform(rotate(0deg));
+              @include transition(all 0.5s ease-in-out);
+              @include border-radius(2px);
+              &:nth-child(1) {
+                top: 5px;
+              }
+              &:nth-child(2),
+              &:nth-child(3) {
+                top: 13px;
+              }
+              &:nth-child(4) {
+                top: 21px;
+              }
+            }
+          }
+          &.open {
+            span {
+              &:nth-child(1) {
+                top: 6px;
+                width: 0%;
+                left: 50%;
+                background: transparent;
+              }
+              &:nth-child(2) {
+                @include transform(rotate(45deg));
+              }
+              &:nth-child(3) {
+                @include transform(rotate(-45deg));
+              }
+              &:nth-child(4) {
+                top: 6px;
+                width: 0%;
+                left: 50%;
+                background: transparent;
+              }
+            }
+          }
+        }
+      }
+      .cvLink {
+        margin-top: -25px;
+        float: right;
+        padding-top: 30px;
+        position: relative;
+
+        @include large-breakpoint("max") {
+          display: none;
+        }
+        &::before {
+          position: absolute;
+          left: 50%;
+          top: 0;
+          font-size: 25px;
+          margin: 0;
+          margin-left: -14px;
+          color: black;
+        }
+        a {
+          float: left;
+          font-size: 0.74rem;
+          line-height: 1;
+          color: $lightblue;
+          font-weight: 500;
+          // font-style: italic;
+          padding: 0px 8px;
+          border-right: 1px solid $lightblue;
+          &:first-child {
+            padding-left: 0;
+          }
+          &:last-child {
+            padding-right: 0;
+            border: 0;
+          }
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+        .sticky & {
+          margin-top: 2px;
+          padding: 5px 0 5px 30px;
+          &::before {
+            left: 0px;
+            margin: 0;
+            color: $darkgrey;
+          }
+          a {
+            margin-top: px;
+            border-color: $darkgrey;
+          }
+        }
+      }
+    }
+  }
+  .searchCps {
+    position: absolute;
+    left: 0px;
+    top: 134px;
+    width: 100%;
+    z-index: 10;
+    background-color: $lightblue;
+    display: none;
+    padding: 0px;
+    animation: megaMenuAnim 0.5s;
+    padding: 30px 0px;
+    @include box-shadow(inset 1px 1px 4px 0px rgba(0, 0, 0, 0.15));
+    @include transition(all 0.5s ease-in-out);
+    &.show {
+      display: block;
+    }
+    .sticky & {
+      top: 72px;
+      padding: 28px 0px;
+    }
+    .SearchBar {
+      @extend %default-content;
+      width: 100%;
+      height: auto;
+      z-index: 5;
+      background: transparent;
+      padding: 3px;
+      border: 1px solid $white;
+      input[type="text"] {
+        float: left;
+        height: 40px;
+        width: 80%;
+        font-size: 0.75rem;
+        line-height: 2.5;
+        font-weight: 500;
+        color: $white;
+        background: none;
+        padding: 0px 0px 0px 15px;
+        -webkit-appearance: none;
+        margin: 0px;
+        outline-color: transparent;
+        outline-style: none;
+        border: 0px;
+        @include border-radius(0px);
+        @include box-shadow(none);
+        @include box-sizing(border-box);
+        &:focus {
+          outline-color: transparent;
+          outline-style: none;
+          @include box-shadow(none);
+        }
+        &::-webkit-input-placeholder {
+          color: rgba($white, 0.7);
+        }
+        &:-moz-placeholder {
+          color: rgba($white, 0.7);
+        }
+        &:-ms-input-placeholder {
+          color: rgba($white, 0.7);
+        }
+      }
+      button {
+        float: right;
+        width: auto;
+        height: 40px;
+        border: 0px;
+        font-size: 1.5rem;
+        color: $white;
+        padding: 0;
+        margin: 0;
+        background: transparent;
+        &:hover {
+          color: $gold;
+        }
+      }
+    }
+    a.searchClose {
+      @extend %default-content;
+      font-size: 2rem;
+      color: $white;
+      &:hover {
+        color: $gold;
+      }
+    }
+  }
+  .MobilMenu {
+    height: 100vh;
+    @extend %default-content;
+    background: rgba($white, 0.96);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    @include transition(all 0.5s ease-in-out);
+    @include box-shadow(1px 1px 4px 0px rgba(0, 0, 0, 0.15));
+
+    #closeMenu {
+      @extend %default-content;
+      padding: 15px 0 15px 20px;
+      i {
+        color: $black;
+        font-size: 1rem;
+      }
+    }
+
+    .mMiniMenu {
+      float: right;
+      @extend %default-content;
+      padding: 15px 10px 15px 0;
+      z-index: 10;
+      a {
+        @extend %default-content;
+        vertical-align: middle;
+        // font-size: 0.7rem;
+        font-size: 1, 1669rem;
+        line-height: 1.538;
+        font-weight: 500;
+        color: $black;
+        padding: 0px 10px;
+        border-right: 1px solid rgba($darkgrey, 0.2);
+        &::before {
+          margin: 0 5px 0 0;
+        }
+        &:last-child {
+          border: 0;
+        }
+        &:hover {
+          // color: $darkred;
+          color: $blue;
+        }
+      }
+    }
+    .wrapper {
+      @extend %default-content;
+      width: 100%;
+      ul {
+        float: left;
+        width: 100%;
+        height: auto;
+        display: block;
+        padding: 0;
+        li {
+          float: left;
+          width: 100%;
+          height: auto;
+          display: block;
+          border-top: 1px dotted rgba($darkgrey, 0.2);
+          position: relative;
+          a {
+            float: left;
+            width: 100%;
+            height: auto;
+            display: block;
+            font-size: 0.9rem;
+            line-height: 3;
+            color: $black;
+            font-weight: 500;
+            padding: 0px 26px;
+            &::after {
+              display: none;
+            }
+          }
+          a.MobileSub {
+            position: absolute;
+            right: 26px;
+            top: 7px;
+            width: 28px;
+            height: 28px;
+            background: $darkred;
+            z-index: 5;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 28px;
+            color: $white;
+            text-align: center;
+            @include border-radius(100%);
+            padding: 0;
+            &.open {
+              background: $darkgrey;
+            }
+          }
+          &.push {
+            ul {
+              max-height: 1000px;
+              margin-bottom: 15px;
+            }
+          }
+        }
+        ul {
+          @extend %default-content;
+          width: 100%;
+          max-height: 0px;
+          @include transition(max-height 0.5s ease-out);
+          overflow: hidden;
+          padding: 0;
+          li {
+            border-bottom: 0px;
+            border-top-color: rgba($darkgrey, 0.1);
+            a {
+              color: $darkgrey;
+              font-weight: 400;
+              line-height: 2.5;
+              font-size: 0.76rem;
+              text-transform: none;
+            }
+          }
+        }
+      }
+      .mSearch {
+        @extend %default-content;
+        width: 100%;
+        background: rgba($lightgrey5, 1);
+        padding: 10px 26px;
+        @include border-radius(0px);
+        input[type="text"] {
+          float: left;
+          height: 40px;
+          width: 75%;
+          font-size: 0.75rem;
+          line-height: 2.5;
+          font-weight: 400;
+          color: $darkgrey;
+          background: none;
+          padding: 0;
+          -webkit-appearance: none;
+          margin: 0px;
+          outline-color: transparent;
+          outline-style: none;
+          border: 0px;
+          @include border-radius(0px);
+          @include box-shadow(none);
+          @include box-sizing(border-box);
+          &:focus {
+            outline-color: transparent;
+            outline-style: none;
+            @include box-shadow(none);
+          }
+          &::-webkit-input-placeholder {
+            color: $darkgrey;
+          }
+          &:-moz-placeholder {
+            color: $darkgrey;
+          }
+          &:-ms-input-placeholder {
+            color: $darkgrey;
+          }
+        }
+        button {
+          float: right;
+          width: 40px;
+          height: 40px;
+          border: 0px;
+          cursor: pointer;
+          margin: 0px;
+          padding: 0px;
+          font-size: 0.9rem;
+          font-weight: 500;
+          color: $white;
+          background: $lightblue;
+          // background: $blue;
+          &:hover {
+            opacity: 0.5;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+            filter: alpha(opacity=50);
+            -moz-opacity: 0.5;
+            -khtml-opacity: 0.5;
+          }
+        }
+      }
+      .mSocial {
+        // display: inline-flex;
+        display: none;
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+        letter-spacing: -5px;
+        padding: 0px 26px;
+
+        a {
+          display: inline-block;
+          width: auto;
+          color: rgba($black, 0.55);
+          font-size: 16px;
+          padding: 0px 15px;
+          // padding: 0px;
+          position: relative;
+          &::before {
+            margin: 0;
+          }
+          &:hover {
+            // color: rgba($darkred, 0.9);
+            color: rgba($lightblue, 0.9);
+          }
+          &:first-child {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  &.search,
+  &.bar {
+    overflow: hidden !important;
+    height: 100% !important;
+  }
+}
+@keyframes megaMenuAnim {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

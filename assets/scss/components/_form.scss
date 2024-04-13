@@ -1,0 +1,453 @@
+form {
+  @extend %default-content;
+  width: 100%;
+  margin: 0;
+}
+.formCapsule {
+  ul {
+    list-style: none;
+    padding: 0 !important;
+
+    li {
+      margin: 15px 0;
+      position: relative;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      @include breakpoint("sm") {
+        margin: 5px 0;
+      }
+      &::before {
+        display: none;
+      }
+      .invalid-message {
+        padding-right: 0px;
+        position: absolute;
+        right: 20px;
+        top: 5px;
+        font-size: 0.6rem;
+        color: $error !important;
+        @include breakpoint("sm") {
+          right: 20px;
+          top: 0px;
+          font-size: 0.6rem;
+        }
+        .error {
+          color: $error !important;
+        }
+      }
+    }
+  }
+  &.sendmail {
+    .invalid-message {
+      top: 5px;
+      right: 20px;
+    }
+  }
+
+  .invalid-message {
+    @extend %default-content;
+    width: 100%;
+    font-size: 0.6rem;
+    text-align: end;
+    color: $error !important;
+    padding-right: 15px;
+    @include breakpoint("sm") {
+      right: 20px;
+      top: 0px;
+      font-size: 0.6rem;
+    }
+    .error {
+      color: $error !important;
+    }
+  }
+}
+%forms {
+  display: block;
+  border: $form-border;
+  border-radius: $border-radius;
+  padding: .8rem 1.5rem;
+  outline: none;
+  background-color: $input-background;
+  font-size: 0.82rem;
+  width: 100%;
+  max-width: 100%;
+  line-height: 1.5;
+  color: $input-text;
+    
+  @include small-breakpoint(max){
+    padding: .9rem 1rem;
+    font-size: 0.76rem;
+  }
+  @include xsmall-breakpoint(max){
+    padding: .7rem .8rem;
+    font-size: 0.7rem;
+  }
+}
+// Input fields on hover
+%forms-hover {
+  border: $form-border-hover;
+}
+%forms-error {
+  border-color: $error;
+}
+%forms-valid {
+  border-color: $success;
+}
+// Input fields on focus
+%forms-focus {
+  border: $form-border-focus;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 2px lighten($grey, 1%);
+}
+
+// Variable containing all input fields
+#{$forms} {
+  @extend %forms;
+
+  &:hover {
+    @extend %forms-hover;
+  }
+
+  &:focus,
+  &:active {
+    @extend %forms-focus;
+  }
+
+  .has-error & {
+    @extend %forms-error;
+  }
+
+  .has-success & {
+    @extend %forms-valid;
+  }
+  &::-webkit-input-placeholder{
+    opacity: 1;
+    color: $placeholder;
+  }
+  &::-moz-placeholder{
+    opacity: 1;
+    color: $placeholder;
+  }
+  &:-moz-placeholder{
+    opacity: 1;
+    color: $placeholder;
+  }
+  &:-ms-input-placeholder {
+    opacity: 1;
+    color: $placeholder;
+  }
+}
+
+textarea {
+  overflow: auto;
+  height: auto;
+  min-height: 150px;
+}
+fieldset {
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  padding: $padding;
+  margin: $margins 0;
+}
+legend {
+  padding: 0 0.5rem;
+  font-weight: 600;
+}
+select {
+  color: $grey;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAJBAMAAADN8WE8AAAAJ1BMVEUAAABHcEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB9YSk7AAAADXRSTlPXABaehSjPsTwKw2xUcKPlSQAAADtJREFUCNdjMGBgYGAWBAKGACCLFcwSAbIcwSyhBAY2RTBLcAMDtyCENYthJZQlw3AQyhIsF4SxOiAsAFMMCKPY35E7AAAAAElFTkSuQmCC);
+  background-position:right center;
+  background-repeat: no-repeat;
+}
+select::-ms-expand {
+  display: none; // dropdown icon fix for IE
+}
+[type="range"] {
+  width: 100%;
+}
+
+label {
+  font-weight: 300;
+  max-width: 100%;
+  display: block;
+  font-size: 0.85rem;
+  margin: 0 0 0.5rem;
+}
+input,
+select,
+textarea {
+  .error & {
+    border: 1px solid $error;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 6px lighten($error, 35%);
+  }
+
+  .valid & {
+    border: 1px solid $success;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1),
+      0 0 6px lighten($success, 25%);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    .error & {
+      @extend .error;
+    }
+
+    .valid & {
+      @extend .valid;
+    }
+  }
+}
+
+%buttons {
+  -webkit-appearance: none;
+  display: inline-block;
+  border: $button-border-width $button-border-style $button-border-color;
+  border-radius: $button-border-radius;
+  background: $button-background;
+  color: $button-color;
+  font-weight: $button-font-weight;
+  font-family: $button-font-family;
+  font-size: $button-font-size;
+  text-transform: $button-text-transform;
+  padding: 1.2rem 1.5rem;
+  margin: 0;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1;
+  outline: 0;
+}
+// Buttons on hover
+%buttons-hover {
+  border: $button-border-width $button-border-style $button-border-color-hover;
+  background: $button-background-hover;
+  color: $button-color-hover;
+  text-decoration: none;
+  outline: 0;
+}
+// Buttons on focus
+%buttons-focus {
+  border: $button-border-width $button-border-style
+    darken($button-border-color, 10%);
+  background:$button-background;
+  color: $button-color;
+  text-decoration: none;
+  outline: 0;
+}
+
+// Apply styles to .button class, button element, and button-based inputs
+#{$buttons} {
+  @extend %buttons;
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+  &:hover {
+    @extend %buttons-hover;
+  }
+
+  &:focus,
+  &:active {
+    @extend %buttons-focus;
+  }
+}
+
+.radios,
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+label {
+  cursor: pointer;
+  font-size: 0.75rem;
+  line-height: 1.7;
+  font-weight: 400;
+  @include small-breakpoint(max){
+    font-size: 0.7rem;
+    line-height: 1.4;
+  }
+  @include xsmall-breakpoint(max){
+    font-size: 0.65rem;
+    line-height: 1.3;
+  }
+}
+input[type="checkbox"],
+input[type="radio"] {
+  @include vh();
+
+  + label {
+    float: left;
+    position: relative;
+    padding: 0 0 0 30px;
+    margin: 0;
+    user-select: none;
+    color: $white;
+
+    a {
+      color: $white;
+      font-weight: bold;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border: $checkbox-border;
+      @include border-radius(0px);
+      @include transition(background 200ms ease-out);
+      background: rgba($lightgrey4,.1);
+      text-align: center;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      @include transform(scale(0));
+      @include transition(transform 200ms ease-out);
+    }
+  }
+}
+input[type="checkbox"] {
+  + label {
+    &:after {
+      background-color: transparent;
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0.35rem;
+      top: 0.1rem;
+      width: 0.5rem;
+      height: 0.8rem;
+      opacity: 0;
+      border-bottom: 2px solid $checkbox-checked;
+      border-right: 2px solid $checkbox-checked;
+      @include transition(border-color 0.3s ease);
+      @include transform(rotate(45deg));
+    }
+  }
+
+  &:checked {
+    + label {
+      &:before {
+        content: "";
+      }
+
+      &:after {
+        content: "";
+        opacity: 1;
+      }
+    }
+  }
+}
+input[type="radio"] {
+  + label {
+    &:before,
+    &:after {
+      border-radius: 50%;
+    }
+
+    &:after {
+      left: 4px;
+      top: 4px;
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &:checked {
+    + label {
+      &:before {
+        background: $checkbox-background-checked;
+        animation: borderscale 300ms ease-in;
+      }
+
+      &:after {
+        background: $checkbox-checked;
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.fileUpload {
+  display: block;
+  border: $form-border;
+  border-radius: $border-radius;
+  padding: 0;
+  outline: none;
+  background: $input-background;
+  font-size: 0.82rem;
+  width: 100%;
+  max-width: 100%;
+  height: 56px;
+  line-height: 1.5;
+  font-weight: 400;
+  position: relative;
+  .error & {
+    border-color: $error;
+  }
+  .valid & {
+    border-color: $success;
+  }
+  .icon {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 55px;
+    height: 47px;
+    font-size: 21px;
+    padding: 13px;
+    text-align: center;
+    color: $grey;
+    opacity: 0.5;
+  }
+  #uploadFile {
+    float: left;
+    width: 100%;
+    height: 54px;
+    background: none;
+    border: 0px;
+    padding: 15px 20px;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    font-weight: 400;
+    color: $grey;
+    cursor: pointer;
+    &::-webkit-input-placeholder,
+    &::-moz-placeholder,
+    &:-ms-input-placeholder {
+      color: $grey;
+    }
+  }
+  input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    width: 100%;
+    height: 49px;
+  }
+  .invalid-feedback {
+    right: 0px !important;
+  }
+}

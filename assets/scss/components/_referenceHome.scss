@@ -1,0 +1,82 @@
+﻿.referenceHome {
+  height: 629px;
+
+  .container-fluid {
+    position: relative;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding: 0px;
+    z-index: 5;
+
+    .iconss {
+      width: 100%;
+      padding: 0px 50px;
+      display: flex;
+      align-items: center;
+    }
+
+    .ourReference {
+      background-color: $lightgrey;
+      height: 141px;
+      width: 465px;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      padding-right: 50px;
+      color: $grey;
+    }
+
+    // .p-content {
+    a {
+      position: relative;
+      float: left;
+      // width: 100%;
+      // padding: 30px 20px;
+
+      //   font-size: 0.875rem;
+      //   line-height: 1.5;
+      //   font-weight: 700;
+      color: $grey;
+      //   margin: 0;
+      //   padding: 12px 35px;
+      position: relative;
+      //   background-color: $darkblue;
+      //   letter-spacing: 0.1em;
+
+      .p-text {
+        float: left;
+        width: 100%;
+        i {
+          font-size: 1.6rem;
+          color: $darkgrey;
+        }
+        h3 {
+          font-size: 1rem;
+          color: $darkgrey;
+          margin-top: 20px;
+        }
+        p,
+        pre {
+          @extend %twoFont;
+          font-size: 0.9rem;
+          line-height: 1.8;
+          color: $lightgrey;
+          font-weight: 400;
+          margin-top: 15px;
+        }
+      }
+      &:hover {
+        .p-text {
+          i {
+            color: $orange;
+          }
+          h3 {
+            color: $orange;
+          }
+        }
+      }
+      //   }
+      //   }
+    }
+  }
+}

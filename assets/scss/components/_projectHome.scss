@@ -1,0 +1,133 @@
+﻿.projectHome{
+    .container{
+
+        .owl-carousel{
+            @extend %default-content;
+            width: 100%;
+            height: auto;
+            .owl-stage{
+                @include flexbox;
+                @include flex-direction(row);
+
+                .p-item {
+                    display: inline-block;  
+                    width: 100%;
+                    height: auto;
+                    border:1px solid $lightgrey2;
+                    background-color: $white;
+                    a{
+                        position: relative;
+                        float: left;
+                        width: 100%;
+    
+                        img{
+                            float: left;
+                            width: 100%;
+                            height: auto;
+                        }
+                        &:hover{
+                            .p-text{
+                                i {
+                                    color:$orange; 
+                                }
+                                h3 {
+                                    color:$orange; 
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .owl-nav{
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                margin-top: -13px;
+                z-index: 1;
+                button{
+                    position: absolute;
+                    top: 0;
+                    width: 26px;
+                    height: 26px;
+                    @include border-radius(100%);
+                    @include transition(all .5s ease);
+                    background-color: $darkgrey;
+                    &.owl-prev{
+                        left: -40px;
+                        @include medium-breakpoint(max) {
+                            left: -13px;
+                        }
+                        i{
+                            margin-left: -1px;
+                        }
+                    }
+                    &.owl-next{
+                        right: -40px;
+                        @include medium-breakpoint(max) {
+                            right: -13px;
+                        }
+                    }
+                    &.disabled{
+                        opacity: .1;
+                        pointer-events: none;
+                        cursor: default;
+                    }
+
+                    i{
+                        font-size: 12px;
+                        color: $white;
+                        @include medium-breakpoint(max) {
+                            color: $white;
+                        }
+                    }
+                    &:hover{
+                        background-color: $orange;
+                        i{
+                            color: $white;
+                        }
+                    }
+                }
+            }
+            .owl-dots {
+                @extend %default-content;
+                width: 100%;
+                margin: 0;
+                text-align: center;
+                margin-top: 10px;
+                &.disabled{
+                    margin: 0;
+                    visibility: hidden;
+                }
+                @include medium-breakpoint(max) {
+                    width: 100%;
+                    text-align: center;
+                }
+                button{
+                    @extend %default-content;
+                    margin: 3px;
+                    &.active{
+                        span{
+                            background-color: $black;
+                            opacity: 1;
+                        }
+                    }
+    
+                    span{
+                        @extend %default-content;
+                        width: 8px;
+                        height: 8px;
+                        background-color: $gold;
+                        opacity: .3;
+                        @include border-radius(100%);
+                    }
+    
+                    @include medium-breakpoint(max) {
+                        float: none;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>RC GRUP</title>
+    <meta name="theme-color" content="#08006b" />
+    <meta name="msapplication-navbutton-color" content="#08006b" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#cf152d" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/logo.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/logo.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/logo.png"
+    />
+    <link rel="manifest" href="assets/site.webmanifest" />
+    <link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#08006b" />
+    <meta name="msapplication-TileColor" content="#08006b" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/general.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/home.css" />
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+      <div class="topRow">
+        <div class="container-fluid container">
+          <div class="row middle-xs">
+            <div class="col-md-8 col-xm-8 col-xs-12">
+              <div class="miniMenu">
+                <a
+                  href="mailto:contact@recruitithub.com"
+                  style="margin-left: 5px"
+                  class="icon-mail"
+                  >contact@recruitithub.com</a
+                >
+                <span>|</span>
+                <a href="tel:+908504410843" class="icon-phone"
+                  >0 (850) 441 08 43</a
+                >
+                <!-- <div class="social"> -->
+
+                <span>|</span>
+                <a href="#" class="icon-linkedin"></a>
+                <a href="#" class="icon-instagram"></a>
+                <!-- </div> -->
+              </div>
+            </div>
+            <div class="col-md-4 col-xm-4 col-xs-12 end-xs">
+              <!--mini-menu-->
+              <div
+                class="miniNav"
+                style="
+                  display: flex;
+                  justify-content: flex-end;
+                  align-items: center;
+                  gap: 10px;
+                "
+              >
+                <!--dil-->
+                <div class="language">
+                  <img
+                    src="assets/images/bayrak.png"
+                    width="19"
+                    height="13"
+                    alt="flag"
+                  />
+
+                  <span>GB</span>
+                  <img
+                    src="assets/svg/chevron-down-solid.svg"
+                    width="15"
+                    height="15"
+                  />
+
+                  <div class="menu">
+                    <a href="#">Türkçe</a>
+                    <a href="#">English</a>
+                  </div>
+                </div>
+                <!--dil-->
+                <div class="search">
+                  <a href="#" class="icon-search has-search"></a>
+                </div>
+              </div>
+              <!--/mini-menu-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contentRow">
+        <!--bottom-->
+        <div class="container-fluid container">
+          <div class="navCapsule">
+            <div class="row middle-xs">
+              <div class="col-md-4 col-lg-2 col-sm-3">
+                <!--logo-->
+                <div class="logo">
+                  <h1>
+                    <a href="/">RC GRUP</a>
+                  </h1>
+                </div>
+                <!--/logo-->
+              </div>
+              <div
+                class="col-md-8 col-lg-8 col-sm-6"
+                style="padding-left: 60px"
+              >
+                <!--menu-->
+                <ul class="nav">
+                  <li><a href="#" class="active">ABOUT</a></li>
+                  <li><a href="#">OUR SERVICES</a></li>
+                  <li><a href="#">REFERENCES</a></li>
+                  <li><a href="#">APPLICATION</a></li>
+                  <li><a href="#">CONTACT</a></li>
+                </ul>
+              </div>
+              <!-- <div class="col-md-3 col-lg-3 col-sm-3"> -->
+              <!--databank link-->
+              <div class="cvLink icon-user">
+                <a href="#">For Partners</a>
+                <a href="#">For Applicant</a>
+              </div>
+              <!--/databank link-->
+
+              <!--mobilmenu-->
+              <div class="Hamburger" id="openMenu">
+                <div>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <!--/mobilmenu-->
+              <!-- </div> -->
+            </div>
+          </div>
+        </div>
+        <!--bottom-->
+      </div>
+      <!--mobile-->
+      <div id="menu" class="MobilMenu">
+        <div id="closeMenu"><i class="icon-cancel"></i></div>
+        <div class="mMiniMenu"></div>
+        <div class="wrapper"></div>
+      </div>
+      <!--/mobile-->
+
+      <!--search-->
+      <div class="searchCps">
+        <div class="container-fluid container">
+          <div class="row middle-xs">
+            <div class="col-xs-2">&nbsp;</div>
+            <div class="col-xs-8">
+              <span class="SearchBar">
+                <input
+                  type="text"
+                  name="Search"
+                  placeholder="Aramak istediğiniz kelimeyi yazınız!"
+                />
+                <button type="submit" class="icon-search"></button>
+              </span>
+            </div>
+            <div class="col-xs-2 end-xs">
+              <a href="#" class="searchClose icon-cancel"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--search-->
+    </header>
+    <!--/Header-->
+
+    <!--page-->
+    <main role="main">
+      <!--Slider-->
+      <section class="homeSlide">
+        <div class="homeSlider">
+          <!--slide-->
+          <div
+            class="slide"
+            data-mobile="assets/images/slider/slider.png"
+            data-desktop="assets/images/slider/slider.png"
+          >
+            <div class="textcontainer">
+              <div class="container-fluid container">
+                <div class="row top-xs">
+                  <div class="col-sm-9 col-xs-12">
+                    <h2>
+                      <span> IT Recruitment &</span> <br />
+                      <span>H</span>uman <span>R</span>esources <br />
+                      Consultancy
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="link"></a>
+            <div
+              class="cropcontainer"
+              style="background-image: url(assets/images/slider/slider.png)"
+            ></div>
+          </div>
+          <!--slide-->
+        </div>
+        <div class="slickDots"></div>
+      </section>
+      <!--/Slider-->
+
+      <!--section-->
+      <section class="aboutusHome">
+        <div class="container-fluid container">
+          <div class="row top-lg middle-xs start-sm center-xs">
+            <div class="col-sm-5 col-xs-12 mt-sm-0 mt-xs-3">
+              <!--image-->
+              <div class="p-figure">
+                <img
+                  src="assets/images/aboutus_page.png"
+                  width="397"
+                  height="398"
+                />
+              </div>
+              <!--/text-->
+            </div>
+            <div class="col-sm-7 col-xs-12">
+              <!--text-->
+              <div class="p-content">
+                <div class="texts">
+                  <h2>
+                    <img
+                      src="assets/OurTalentIcon.png"
+                      width="17"
+                      height="15"
+                    />Our talent is finding yours.
+                  </h2>
+                </div>
+                <span class="p-text">
+                  <p class="spot">
+                    Recruit IT is a specialized IT consulting firm committed to
+                    providing exceptional human resources and talent acquisition
+                    services. We understand the dynamic demands of the business
+                    landscape and provide a comprehensive suite of services
+                    designed to optimize your HR and talent acquisition
+                    strategies.
+                  </p>
+                  <a href="#" class="more">Read more</a>
+                </span>
+              </div>
+              <!--/image-->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section -->
+
+      <!--section-->
+      <section class="whereHome">
+        <div class="container-fluid container">
+          <div class="row bottom-xs start-xm center-xs">
+            <div class="col-xs">
+              <!--title-->
+              <div class="titles">
+                <div class="title">
+                  <h2>
+                    <div>&nbsp;</div>
+                    Our Services
+                  </h2>
+                </div>
+              </div>
+              <div class="buttons">
+                <a href="#" class="active">FOR PARTNERS</a>
+                <a href="#">FOR APPLICANTS </a>
+              </div>
+
+              <!--/title-->
+            </div>
+          </div>
+          <div class="row mt-xs-4 start-xm center-xs whereList">
+            <div class="col-md-6 col-xs-12">
+              <div class="p-card">
+                <div class="icon __01 icon-icon1"></div>
+                <!-- <span class="number">01</span> -->
+                <h3>IT Recruitment Consultancy</h3>
+                <p>
+                  We guide your organization in overcoming thechallenges of
+                  recruiting skilled IT professionalsin a competitive and
+                  rapidly evolving industry.
+                </p>
+                <a href="#" class="more">Read more</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <div class="p-card">
+                <div class="icon __02 icon-icon2"></div>
+                <!-- <span class="number">02</span> -->
+                <h3>Human Resources Consultancy</h3>
+                <p>
+                  Whether you're a startup navigating the complexities of HR or
+                  an established enterprise seeking to revitalize your
+                  practices,...
+                </p>
+                <a href="#" class="more">Read more</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <div class="p-card">
+                <div class="icon __03 icon-icon3"></div>
+                <!-- <span class="number">02</span> -->
+                <h3>Employer Branding on LinkedIn</h3>
+                <p>
+                  As the world's largest professional network, LinkedIn offers a
+                  powerful platform for organizations to shape their employer
+                  brand and...
+                </p>
+                <a href="#" class="more">Read more</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <div class="p-card">
+                <div class="icon __04 icon-icon4"></div>
+                <!-- <span class="number">03</span> -->
+                <h3>IT Recruitment Training</h3>
+                <p>
+                  Meet our comprehensive IT recruitment training, meticulously
+                  crafted for companies aiming to excel in training their
+                  recruitment teams for IT recruitment.
+                </p>
+                <a href="#" class="more">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--/section-->
+
+      <!--section-->
+      <section class="WhyChooseUs">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4 col-xs-12">
+              <span class="images">
+                <img src="assets/images/wasd.png" width="577" height="588" />
+              </span>
+            </div>
+            <div class="col-md-8 col-xs-12 content">
+              <h2>Why Choose Us?</h2>
+
+              <div class="ww">
+                <div class="col-md-6 col-xs-12 toptext">
+                  <div class="wasdwasd">
+                    <span>
+                      <a href="">_ Sourcing via <span>LinkedIn</span></a></span
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6 col-xs-12 toptext">
+                  <div class="wasdwasd">
+                    <a href=""><span>_ IT-Focused</span> Recruitment</a>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-xs-12 bottomtext">
+                  <div class="wasdwasd">
+                    <a href=""><span>_ 100%</span> Customer Satisfaction</a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-xs-12 bottomtext">
+                  <div class="wasdwasd">
+                    <a href=""><span>_ Applicant Tracking</span> System</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--/section-->
+
+      <!--section-->
+      <section class="blogs">
+        <div class="container-fluid container">
+          <div class="row">
+            <div class="col-xs center-xs">
+              <h2>News & BLOG</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid container crousel">
+          <div class="row middle-xs blogSlider">
+            <!--item-->
+            <div class="col-xs slide">
+              <div class="box">
+                <span class="Image">
+                  <a href="#">
+                    <img
+                      src="assets/images/blog/blog1.png"
+                      width="400"
+                      height="260"
+                    />
+                  </a>
+                </span>
+                <span class="Text">
+                  <h3>Lorem Ipsum Dolor Sit Amet Concecteur</h3>
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Quis ipsum suspendisse ultrices gravida. Risus
+                    commodo viverra maecenas accumsan lacus vel facilisis.
+                  </p>
+                  <a href="#">Read More</a>
+                </span>
+              </div>
+            </div>
+            <!--item-->
+            <!--item-->
+            <div class="col-xs slide">
+              <div class="box">
+                <span class="Image">
+                  <a href="#">
+                    <img
+                      src="assets/images/blog/blog2.png"
+                      width="400"
+                      height="260"
+                    />
+                  </a>
+                </span>
+                <span class="Text">
+                  <h3>Lorem Ipsum Dolor Sit Amet Concecteur</h3>
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Quis ipsum suspendisse ultrices gravida. Risus
+                    commodo viverra maecenas accumsan lacus vel facilisis.
+                  </p>
+                  <a href="#">Read More</a>
+                </span>
+              </div>
+            </div>
+            <!--item-->
+            <!--item-->
+            <div class="col-xs slide">
+              <div class="box">
+                <span class="Image">
+                  <a href="#">
+                    <img
+                      src="assets/images/blog/blog3.png"
+                      width="400"
+                      height="260"
+                    />
+                  </a>
+                </span>
+                <span class="Text">
+                  <h3>Lorem Ipsum Dolor Sit Amet Concecteur</h3>
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Quis ipsum suspendisse ultrices gravida. Risus
+                    commodo viverra maecenas accumsan lacus vel facilisis.
+                  </p>
+                  <a href="#">Read More</a>
+                </span>
+              </div>
+            </div>
+            <!--item-->
+          </div>
+          <div class="col-12 seeAll">
+            <a href="#">See All</a>
+          </div>
+        </div>
+      </section>
+      <!--/section-->
+
+      <!--section-->
+      <section class="customerHome">
+        <div class="container-fluid">
+          <div class="row mt-md-3 mt-xs-2 center-xs">
+            <div class="col-md-4 col-xs-12">
+              <div class="title">
+                <h2>Our References</h2>
+                <span class="icon-right-open"></span>
+              </div>
+            </div>
+
+            <div
+              class="col-md-8 col-xs-12"
+              style="display: flex; align-items: center"
+            >
+              <div class="owl-carousel" id="customerSlider">
+                <!--item-->
+                <div class="p-item">
+                  <a href="#">
+                    <img
+                      src="assets/images/referances/ref1.png"
+                      width="121"
+                      height="72"
+                    />
+                  </a>
+                </div>
+                <!--item-->
+                <!--item-->
+                <div class="p-item">
+                  <a href="#">
+                    <img
+                      src="assets/images/referances/ref2.png"
+                      width="137"
+                      height="53"
+                    />
+                  </a>
+                </div>
+                <!--item-->
+                <!--item-->
+                <div class="p-item">
+                  <a href="#">
+                    <img
+                      src="assets/images/referances/ref3.png"
+                      width="161"
+                      height="59"
+                    />
+                  </a>
+                </div>
+                <!--item-->
+                <!--item-->
+                <div class="p-item">
+                  <a href="#">
+                    <img
+                      src="assets/images/referances/ref4.png"
+                      width="92"
+                      height="92"
+                    />
+                  </a>
+                </div>
+                <!--item-->
+                <!--item-->
+                <div class="p-item">
+                  <a href="#">
+                    <img
+                      src="assets/images/referances/ref5.png"
+                      width="132"
+                      height="81"
+                    />
+                  </a>
+                </div>
+                <!--item-->
+                <!--item-->
+                <div class="p-item">
+                  <a href="#">
+                    <img
+                      src="assets/images/referances/ref6.png"
+                      width="138"
+                      height="60"
+                    />
+                  </a>
+                </div>
+                <!--item-->
+                <!--item-->
+                <div class="p-item">
+                  <a href="#">
+                    <img
+                      src="assets/images/referances/ref7.png"
+                      width="145"
+                      height="55"
+                    />
+                  </a>
+                </div>
+                <!--item-->
+                <!--item-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--/section-->
+    </main>
+    <!--/page-->
+
+    <!--footer-->
+    <footer>
+      <div class="container-fluid container">
+        <div class="middleRow">
+          <div class="container-fluid container">
+            <div class="row middle-xs">
+              <div class="col-md-5 col-xs-12 start-md center-xs">
+                <img
+                  src="assets/images/WhiteLogo.png"
+                  width="148"
+                  height="57"
+                  alt="RC GRUP Logo"
+                  rel="muse"
+                />
+              </div>
+              <div class="col-md-7 col-xs-12 end-md center-xs mt-md-0 mt-xs-3">
+                <div class="social">
+                  <a href="#" class="icon-linkedin"></a>
+                  <span>|</span>
+                  <a href="#" class="icon-instagram"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row topRow start-md center-xs">
+          <!-- <div class="col-lg-8 col-xs-12"> -->
+          <div class="row">
+            <!-- </div> -->
+            <div class="col-lg-4 col-md-6 col-xs-12">
+              <!--menu-->
+              <div class="menu">
+                <ul>
+                  <li><a href="#" class="big">Quick Links</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Preferences</a></li>
+                  <li><a href="#">Offices</a></li>
+                  <li><a href="#">Our Policies</a></li>
+                  <li><a href="#">QA</a></li>
+                  <li><a href="#">Certificates</a></li>
+                </ul>
+              </div>
+              <!--/menu-->
+            </div>
+            <div class="col-lg-4 col-md-6 col-xs-12">
+              <!--menu-->
+              <div class="menu">
+                <ul>
+                  <li><a href="#" class="big">Our Services</a></li>
+                  <li><a href="#">IT Recruitment Consultancy</a></li>
+                  <li><a href="#">Human Resources Consultancy</a></li>
+                  <li><a href="#">Employer Branding on LinkedIn</a></li>
+                  <li><a href="#">IT Recruitment Training</a></li>
+                </ul>
+              </div>
+              <!--/menu-->
+            </div>
+
+            <!-- </div> -->
+            <div class="col-lg-4 col-md-6 col-xs-12">
+              <!--Mail-->
+              <div class="footerMail">
+                <div class="menu">
+                  <ul>
+                    <li><a href="#" class="big">Contact Info</a></li>
+                    <li>
+                      <a href="#">Lorem ipsum dolor sit amet concecteur</a>
+                    </li>
+                    <li><a href="#">İstanbul / Türkiye</a></li>
+
+                    <li>
+                      <a href="mailto:contact@recruitithub.com"
+                        >Email: contact@recruitithub.com</a
+                      >
+                    </li>
+                    <li class="contact">
+                      <a href="#">Phone:</a> <span></span>
+                      <a href="#"> +0 (850) 441 08 43</a>
+                    </li>
+                    <li class="contact">
+                      <a href="#">Whatsapp: </a>
+                      <span></span>
+                      <a href="#">0533 325 66 82</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <span class="Content start-xs">
+                  <form
+                    id="form-post-ebulten"
+                    action="#"
+                    method="post"
+                    data-parsley-validate
+                  >
+                    <span class="input form-group">
+                      <input
+                        type="email"
+                        name="EBulten.Mail"
+                        id="EmailAddress"
+                        placeholder="Your E-Mail"
+                        required
+                      />
+                    </span>
+                  </form>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- bottomRow -->
+      <div class="bottomRow">
+        <div class="container-fluid container">
+          <div class="row middle-xs">
+            <div class="col-md-4 col-xs-12">
+              <div class="miniMenu">
+                <span class="copyright"
+                  >Copyright © 2022 Tüm Hakları Saklıdır.
+                </span>
+              </div>
+            </div>
+            <div class="col-md-8 col-xs-12 start-md center-xs">
+              <div class="miniMenu2">
+                <a href="#">Kişisel Verilerin Korunması Politikası</a>
+                <span>|</span>
+                <a href="#">Gizlilik Bildirimi</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- bottomRow -->
+    </footer>
+    <!--/footer-->
+
+    <!--Servis Talebi-->
+    <div class="callYou">
+      <a
+        data-fancybox=""
+        data-animation-duration="500"
+        data-src="#callYouModal"
+        href="javascript:;"
+        class="icon-phone2"
+        >Sizi Arayalım</a
+      >
+    </div>
+    <div class="linkedinBt">
+      <a href="#" class="icon-linkedin">Linkedin </a>
+    </div>
+    <div style="display: none" id="callYouModal" class="animated-modal">
+      <h2>SİZİ ARAYALIM</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <div class="formCapsule">
+        <form id="form-service" method="post">
+          <ul class="row">
+            <li class="col-xs-12 form-group">
+              <input type="text" name="Name" placeholder="Adınız" required />
+            </li>
+            <li class="col-xs-12 form-group">
+              <input
+                type="text"
+                name="Surname"
+                placeholder="Soyadınız"
+                required
+              />
+            </li>
+            <li class="col-xs-12 form-group">
+              <input
+                type="email"
+                name="Email"
+                placeholder="E-posta Adresiniz"
+                required
+              />
+            </li>
+            <li class="col-xs-12 form-group">
+              <input
+                type="text"
+                name="Telephone"
+                placeholder="Telefonunuz"
+                required
+              />
+            </li>
+            <li class="col-xs-12 form-group">
+              <input
+                type="checkbox"
+                class="onay"
+                id="checkbox-service"
+                name="checkbox-service"
+                required
+              />
+              <label for="checkbox-service"
+                ><a href="#" target="_blank">KVKK metnini</a> Okudum Kabul
+                Ediyorum.</label
+              >
+            </li>
+            <li class="col-xs-12 center-xs">
+              <input type="submit" id="bt_submit_service" value="GÖNDER" />
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+    <!--/Servis Talebi-->
+    <!--Script-->
+    <script type="text/javascript" src="assets/js/slick.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.3.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="assets/js/fancybox/jquery.fancybox.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="assets/js/jquery.matchHeight-min.js"
+    ></script>
+    <script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+    <script
+      type="text/javascript"
+      src="assets/js/mobile-swipe-menu.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="assets/js/cookiesconsent.min.js"
+    ></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/sweetalert/sweet-alert.min.js"
+    ></script>
+    <script type="text/javascript" src="assets/js/parsley.min.js"></script>
+    <script
+      type="text/javascript"
+      src="assets/js/jquery.inputmask.min.js"
+    ></script>
+    <script type="text/javascript" src="assets/js/form.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        //Ebülten validate
+        $("#bt_submit_contact").on("click", function () {
+          $("#form-post-contact").parsley().validate();
+          if ($("#form-post-contact").parsley().isValid()) {
+            $.fancybox.close();
+            swal(
+              "Sizi Arayalım",
+              "Bilgileriniz tarafımıza ulaşmıştır. En kısa süre içerisinde size dönüş sağlanacaktır. Teşekkür ederiz.",
+              "success"
+            );
+            return false;
+          }
+        });
+      });
+    </script>
+    <!--/Script-->
+  </body>
+</html>

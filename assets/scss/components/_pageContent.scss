@@ -1,0 +1,701 @@
+.breadcrumbs{
+    background-color: $lightgrey5;
+    @extend %default-content;
+    width: 100%;
+    font-size: 0.7rem;
+    line-height: 2.2;
+    font-weight: 500;
+    color: $lightgrey;
+    @include xsmall-breakpoint(max) {
+        font-size: 0.6rem;
+    }
+    
+    a{
+        display: inline-block;
+        font-size: 0.7rem;
+        line-height: 1.5;
+        font-weight: 500;
+        color: $lightgrey;
+        padding: 7px 10px;
+        @include medium-breakpoint("max") {
+            font-size: .7rem;
+        }
+        @include xsmall-breakpoint("max") {
+            font-size: .6rem;
+            padding: 3px 7px;
+        }
+        &:hover{
+            opacity: .5;
+        }
+        &:first-child{
+            padding-left: 0;
+        }
+        &:last-child{
+            font-weight: 700;
+            padding-right: 0;
+        }
+    }
+}
+.pageContent{
+    position: relative;
+    .container{
+        position: relative; 
+        padding-right: 30px;
+        padding-left: 30px;
+        z-index: 5;
+        &.full{
+            width:100%;
+            max-width: $max-container;
+            @include medium-breakpoint("max") {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+        
+            .row{
+                &.textPage{
+                    .p-title {
+                        @include small-breakpoint("max") {
+                            padding-top: 50px;
+                        }
+                    }
+                    .p-box{
+                        @include small-breakpoint("max") {
+                            padding-top: 30px;
+                        }
+                    }
+                    .textCapsule {
+                        @include small-breakpoint("max") {
+                            padding: 50px 0 0;
+                        }
+                    }
+                }
+            }
+        }
+        .row{
+            &.textPage{
+                .p-title {
+                    float: left;
+                    width: 100%;
+                    height: auto;
+                    p, pre {
+                        display: inline-block;
+                        margin: 0;
+                        font-size: .9rem;
+                        line-height: 1.6;
+                        color: $red;
+                    }
+                    h1 {
+                        font-size: 3rem;
+                        color:$black; 
+                        margin: 0;
+                        padding: 0;
+                        @include medium-breakpoint("max") {
+                            font-size: 2.5rem;
+                        }
+                        @include xsmall-breakpoint("max") {
+                            font-size: 1.8rem;
+                        }
+                    }
+                }
+                .leftMenu{
+                    display: inline-block;
+                    width: 100%;
+                    margin-bottom: 40px;
+                    span{
+                        @extend %default-content;
+                        width: 100%;
+                        height: auto;
+                        padding: 12px 30px 12px 30px;
+                        font-size: .9rem;
+                        line-height: 1.5;
+                        font-weight: 700;
+                        color: $white;
+                        background-color: $red;
+                        text-align: left;
+                        position: relative;
+                        cursor: pointer;
+                        display: none;
+                        &::before{
+                            position: absolute;
+                            right: 7px;
+                            top: 0px;
+                            font-family: $icon-font;
+                            content: '\E80B';
+                            font-size: 1rem;
+                            margin: 10px 10px;
+                            @include transition(all 0.35s ease-in);
+                            @include rotate(90);
+                        }
+                        @include small-breakpoint(max) {
+                            display: block;
+                        }
+                    }
+                    ul{
+                        display: inline-block;
+                        width: 100%;
+                        height: auto;
+                        list-style: none;
+                        margin: 0;
+                        @include transition(all 0.35s ease-in);
+                        @include small-breakpoint("max") {
+                            height: 0;
+                            overflow: hidden;
+                            display: none;
+                            padding: 0;
+                            margin: 1px 0;
+                        }
+                        li{
+                            display: inline-block;
+                            width: 100%;
+                            height: auto;
+                            list-style: none;
+                            padding: 0;
+                            margin: 2px 0;
+                            a{
+                                display: inline-block;
+                                width: 100%;
+                                height: auto;
+                                padding: 15px 30px 15px 20px;
+                                font-size: .9rem;
+                                line-height: 1.6;
+                                font-weight: 500;
+                                color: $black;
+                                text-align: left;
+                                position: relative;
+                                background-color: $lightgrey;
+                                @include border-radius(10px);
+                                @include small-breakpoint(max) {
+                                    padding: 12px 30px;
+                                    font-size: .8rem;
+                                    line-height: 1.5;
+                                    @include border-radius(0px);
+                                }
+
+                                &::after{
+                                    position: absolute;
+                                    right: 0px;
+                                    top: 0px;
+                                    @extend %iconFont;
+                                    content: '\e80b';
+                                    font-size: 1.2rem;
+                                    margin: 13px 13px;
+                                    display: none;
+                                    color: $white;
+                                    @include small-breakpoint(max) {
+                                        display: none;
+                                    }
+                                }
+
+                                &:hover{
+                                    color:$white;
+                                    background-color: $darkgrey;
+                                    &::after{
+                                        color: $white;
+                                        display: block;
+                                        @include small-breakpoint(max) {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                                &.active{
+                                    color: $white;
+                                    background-color:$red;
+                                    font-weight: 700;
+                                    &::after{
+                                        display: block;
+                                        @include small-breakpoint(max) {
+                                            display: none;
+                                        }
+                                    }
+                                    @include small-breakpoint(max) {
+                                        background-color:$grey;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.left--open{
+                        span{
+                            &::before{
+                                @include rotate(-90)
+                            }
+                        }
+                        ul{
+                            @include breakpoint("sm") {
+                                display: inline-block;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+                .textCapsule{
+                    @extend %default-content;
+                    width: 100%;
+
+
+                    i {
+                        font-size: 2rem;
+                        color:$orange; 
+                    }
+                    h1{
+                        @extend %default-content;
+                        width: 100%;
+                        font-size: 1.5rem;
+                        line-height: 1.5;
+                        font-weight: 700;
+                        color:$orange;  
+                        padding: 0 0 10px 0;
+                        margin: 0;
+
+                        @include small-breakpoint(max) {
+                            font-size: 1.2rem;
+                        }
+                        @include xsmall-breakpoint(max) {
+                            font-size: 1rem;
+                        }
+                    }
+                    h2{
+                        @extend %default-content;
+                        width: 100%;
+                        font-size: 1.3rem;
+                        line-height: 1.5;
+                        font-weight: 700;
+                        color:$red; 
+                        padding: 10px 0;
+                        margin: 0;
+
+                        @include small-breakpoint(max) {
+                            font-size: 1.1rem;
+                        }
+                        @include xsmall-breakpoint(max) {
+                            font-size: .9rem;
+                        }
+                    }
+                    h3{
+                        @extend %default-content;
+                        width: 100%;
+                        font-size: 1.3rem;
+                        line-height: 1.5;
+                        font-weight: 700;
+                        color:$red; 
+                        padding: 10px 0;
+                        margin: 0;
+
+                        @include small-breakpoint(max) {
+                            font-size: 1rem;
+                        }
+                        @include xsmall-breakpoint(max) {
+                            font-size: .9rem;
+                        }
+                    }
+
+                    .date{
+                        float: left;
+                        width: 100%;
+                        @extend %twoFont;
+                        line-height: 1.8; 
+                        font-weight: 400;
+                        font-size: .7rem;
+                        margin-top: 10px;
+                        margin-bottom: 20px;
+                        color:$darkgrey; 
+                        @include tracking(100);
+                    }
+                    .p-text{
+                        display: inline-block;
+                        width: 100%;
+                        p, pre {
+                            display: inline-block;
+                            width: 100%;
+                            @extend %twoFont;
+                            font-size: .9rem;
+                            line-height: 1.9;
+                            color: $lightgrey;
+                            font-weight: 400;
+                            padding: 10px 0;
+                            margin: 0;
+                            &.spot{
+                                color: $black;
+                                @extend %twoFont;
+                                line-height: 1.4;
+                                font-size: 1.1rem;
+                                @include small-breakpoint(max) {
+                                    font-size: 1.1rem;
+                                }
+                                @include xsmall-breakpoint(max) {
+                                    font-size: .9rem;
+                                }
+                            }
+                            b{
+                                font-weight: 700; 
+                                &.title{
+                                    font-weight: 800; 
+                                    color:$grey;  
+                                    margin: 0px;
+                                    padding: 0px;
+                                }
+                            }
+                            img{
+                                @extend %default-content;
+                                max-width: 100%;
+                                @include border-radius(20px);
+                                @include small-breakpoint(max) {
+                                    @include border-radius(10px);
+                                }
+                                @include xsmall-breakpoint(max) {
+                                    @include border-radius(6px);
+                                }
+                            }
+                            a{
+                                font-size: .9rem;
+                                line-height: 1.9;
+                                color: $grey;
+                                &:hover{
+                                    color:$red; 
+                                    text-decoration: underline;
+                                }
+                            }
+                            @include small-breakpoint(max) {
+                                font-size: .8rem;
+                                line-height: 1.7;
+                            }
+                            @include xsmall-breakpoint(max) {
+                                font-size: .76rem;
+                            }
+                        }
+                        ul{
+                            @extend %default-content;
+                            width: 100%;
+                            margin:0;
+                            padding: 0;
+                            li{
+                                @extend %default-content;
+                                width: 100%;
+                                margin: 0;
+                                padding: 0;
+                            }
+                        }
+                    }
+                    .p-contact{
+                        display: inline-block;
+                        width: 100%;
+                        letter-spacing: -5px;
+                        margin-top: 10px;
+                        a{
+                            display: inline-block;
+                            vertical-align: middle;
+                            @extend %twoFont;
+                            letter-spacing: 0;
+                            font-size: .9rem;
+                            line-height: 1.9;
+                            color: $lightgrey;
+                            font-weight: 400;
+                            @include transition(all .5s ease-in-out);
+                            margin: 10px;
+                            &::before{
+                                margin:0 5px 0 0;
+                            }
+                            &:hover{
+                                color: $orange;
+                            } 
+                            @include small-breakpoint(max) {
+                                margin: 5px 10px;
+                                font-size: .8rem;
+                            }
+                            @include xsmall-breakpoint(max) {
+                                font-size: .76rem;
+                            }
+                        }
+                    }
+                }
+                .searchLast{
+                    background-color: $white;
+                    position: relative;
+                    z-index: 2;
+                    p{
+                        border-top: 1px dashed rgba($darkgrey,.5);
+                        padding: 15px 0px;
+                        margin: 0;
+                        font-size: .8rem;
+                        line-height: 2;
+                        font-weight: 400;
+                        color: $grey;
+                        &:first-child{
+                            border: 0;
+                        }
+                        a{
+                             
+                            color: $darkblue;
+                            font-weight: 700;
+                            font-size: .9rem;
+                            &:hover{
+                                opacity: .5;
+                            }
+                            @include small-breakpoint(max) {
+                                font-size: .8rem;
+                            }
+                        }
+                    }
+                }
+            }
+            &.servicesPage{
+                div[class^="col-"]{
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    @include small-breakpoint(max) {
+                        padding-top: 8px;
+                        padding-bottom: 8px;
+                    }
+
+                    .p-item {
+                        float: left;
+                        width: 100%;
+                        height: auto;
+                        a{
+                            position: relative;
+                            float: left;
+                            width: 100%;
+                            padding: 30px 20px;
+                            border:1px solid $lightgrey2;
+        
+                            .p-text{
+                                float: left;
+                                width: 100%;
+                                i {
+                                    font-size: 2rem;
+                                    color:$darkgrey; 
+                                    @include small-breakpoint(max) {
+                                        font-size:1.5rem;
+                                    }
+                                }
+                                h3 {
+                                    font-size: 1.3rem;
+                                    color:$darkgrey; 
+                                    margin-top: 20px;
+                                    @include small-breakpoint(max) {
+                                        font-size: 1rem;
+                                    }
+                                }
+                                p, pre {
+                                    @extend %twoFont;
+                                    font-size: .9rem;
+                                    line-height: 1.8;
+                                    color:$lightgrey;  
+                                    font-weight: 400;
+                                    margin-top: 15px;
+                                    @include small-breakpoint(max) {
+                                        font-size: .8rem;
+                                        line-height: 1.6;
+                                    }
+                                }
+                            }
+                            &:hover{
+                                background-color: $orange;
+                                .p-text{
+                                    i, h3, p, pre {
+                                        color:$white; 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.customerPage{
+                div[class^="col-"]{
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+
+                    .p-item {
+                        display: inline-block;  
+                        width: 100%;
+                        height: auto;
+                        border:1px solid $lightgrey2;
+                        background-color: $white;
+                        a{
+                            position: relative;
+                            float: left;
+                            width: 100%;
+        
+                            img{
+                                float: left;
+                                width: 100%;
+                                height: auto;
+                            }
+                            &:hover{
+                                .p-text{
+                                    i {
+                                        color:$orange; 
+                                    }
+                                    h3 {
+                                        color:$orange; 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.projectPage{
+                div[class^="col-"]{
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    .p-title {
+                        float: left;
+                        width: 100%;
+                        height: auto;
+                        padding-top: 15px;
+                        h2 {
+                            font-size: 1.2rem;
+                            color:$darkblue; 
+                            margin: 0;
+                            padding: 0 0 10px;
+                            border-bottom: 1px solid $darkblue;
+                            @include medium-breakpoint("max") {
+                                font-size: 1rem;
+                            }
+                            @include xsmall-breakpoint("max") {
+                                font-size: .9rem;
+                            }
+                            &:after{
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .p-item {
+                        display: inline-block;  
+                        width: 100%;
+                        height: auto;
+                        border:1px solid $lightgrey2;
+                        background-color: $white;
+                        a{
+                            position: relative;
+                            float: left;
+                            width: 100%;
+        
+                            img{
+                                float: left;
+                                width: 100%;
+                                height: auto;
+                            }
+                            &:hover{
+                                .p-text{
+                                    i {
+                                        color:$orange; 
+                                    }
+                                    h3 {
+                                        color:$orange; 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.blogPage{
+                div[class^="col-"]{
+                    margin: 15px 0;
+                    .p-item {
+                        float: left;
+                        width: 100%;
+                        height: 100%;
+                        border:1px solid $lightgrey2;
+                        a{
+                            position: relative;
+                            float: left;
+                            width: 100%;
+        
+                            .p-text{
+                                float: left;
+                                width: 100%;
+                                padding-left: 30px;
+                                text-align: left;
+                                @include small-breakpoint("max") {
+                                    padding: 25px;
+                                    text-align: center;
+                                }
+        
+                                h3 {
+                                    font-size: 1.3rem;
+                                    color:$darkgrey; 
+                                    @include small-breakpoint("max") {
+                                        font-size: 1rem;
+                                    }
+                                }
+                                p, pre {
+                                    @extend %twoFont;
+                                    font-size: .9rem;
+                                    line-height: 1.8;
+                                    color:$lightgrey;  
+                                    font-weight: 400;
+                                    margin-top: 15px;
+                                    &.date{
+                                        font-size: .7rem;
+                                        margin-top: 10px;
+                                        color:$darkgrey; 
+                                        @include tracking(100);
+                                    }
+                                    @include small-breakpoint("max") {
+                                        font-size: .8rem;
+                                        line-height: 1.6;
+                                        &.date{
+                                            font-size: .6rem;
+                                        }
+                                    }
+                                }
+                            }
+                            .p-figure{
+                                float: left;
+                                width: 100%;
+            
+                                img{
+                                    float: left;
+                                    width: 100%;
+                                    height: auto;
+                                }
+                            }
+                            &:hover{
+                                .p-text{
+                                    i {
+                                        color:$orange; 
+                                    }
+                                    h3 {
+                                        color:$orange; 
+                                    }
+                                }
+                            }
+        
+                            .reverse{
+                                .p-text{
+                                    padding-left: 0;
+                                    padding-right: 30px;
+                                    text-align: right;
+                                    @include small-breakpoint("max") {
+                                        padding: 25px;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+        
+        
+                                
+                    
+                }
+            }
+     
+            &.reverse {
+                .textCapsule{
+                    padding-left: 0px;
+                    padding-right: 20px;
+
+                    @include small-breakpoint(max) {
+                        padding: 0px 15px;
+                    }
+                }
+            }
+        }
+    }
+}

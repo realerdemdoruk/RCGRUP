@@ -1,0 +1,202 @@
+//==============================================================================
+// Global Colors
+//==============================================================================
+
+$darkblue: #08006b !default;
+$darkgrey: #313131 !default;
+$darkgrey2: #7e7e7e !default;
+$darkgrey3: #232323 !default;
+$orange: #dda01f !default;
+$lightgrey: #888 !default;
+$lightgrey2: #f2f2f2 !default;
+$lightgrey3: #f7f7f7 !default;
+$lightgrey4: #fafafa !default;
+$lightgrey5: #eaeaea !default;
+//==============================================================================
+$lightblue: #0158a2 !default;
+$lightblue2: #57b2ff !default;
+$linkedin: #3c67c3 !default;
+$blue: #5479f7 !default;
+$darkblue: #1431bd !default;
+$grey: #333841 !default;
+$grey2: #60656f !default;
+$grey3: #8a9196 !default;
+$grey4: #f6f7f9 !default;
+$lightgrey: #f8f9fc !default;
+$white2: #b0dbff !default;
+$darkred: #d80027 !default;
+//==============================================================================
+$black: #000 !default;
+$black2: #1a1a1a !default;
+$white: #fff !default;
+$red: #cf152d !default;
+// $grey: #666666 !default;
+// $grey3: #999 !default;
+$darkgrey2: #252b30 !default;
+
+$gold: #ca9e67 !default;
+$darkred: #844a48 !default;
+$lightred: #e07962 !default;
+$lightred2: #f1ae9f !default;
+// $blue: #0090d0 !default;
+$leftMenu: #fafafa !default;
+$error: #d33c40 !default;
+$success: #29de7d !default;
+$hoverselect: #58a0ff !default;
+
+$floorcolor1: #f9b256 !default;
+$floorcolor2: #ab8cc0 !default;
+$floorcolor3: #83d0f5 !default;
+$floorcolor4: #8ec89a !default;
+
+@mixin floorColor($floor, $color) {
+  &[data-id^="#{$floor}"] {
+    &:nth-child(1) {
+      background-color: rgba($color, 1);
+    }
+    &:nth-child(2) {
+      background-color: rgba($color, 0.7);
+    }
+    &:nth-child(3) {
+      background-color: rgba($color, 0.5);
+    }
+    &:nth-child(4) {
+      background-color: rgba($color, 0.3);
+    }
+    &:nth-child(5) {
+      background-color: rgba($color, 0.2);
+    }
+    &.active {
+      &:nth-child(1) {
+        &::before {
+          border-color: rgba(0, 0, 0, 0) rgba($color, 1) rgba(0, 0, 0, 0)
+            rgba(0, 0, 0, 0);
+        }
+      }
+      &:nth-child(2) {
+        &::before {
+          border-color: rgba(0, 0, 0, 0) rgba($color, 0.7) rgba(0, 0, 0, 0)
+            rgba(0, 0, 0, 0);
+        }
+      }
+      &:nth-child(3) {
+        &::before {
+          border-color: rgba(0, 0, 0, 0) rgba($color, 0.5) rgba(0, 0, 0, 0)
+            rgba(0, 0, 0, 0);
+        }
+      }
+      &:nth-child(4) {
+        &::before {
+          border-color: rgba(0, 0, 0, 0) rgba($color, 0.3) rgba(0, 0, 0, 0)
+            rgba(0, 0, 0, 0);
+        }
+      }
+      &:nth-child(5) {
+        &::before {
+          border-color: rgba(0, 0, 0, 0) rgba($color, 0.2) rgba(0, 0, 0, 0)
+            rgba(0, 0, 0, 0);
+        }
+      }
+    }
+  }
+}
+
+%default-content {
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+//==============================================================================
+// Typography
+//==============================================================================
+// Body
+$font-size: 1rem !default;
+$body-font-size: 1rem !default;
+$font-style: normal !default;
+$font-variant: normal !default;
+$font-weight: normal !default;
+$font-family: "Inter", sans-serif !default;
+$font-family-two: "Hind", sans-serif !default;
+$icon-font: "nlm-icon" !default;
+$line-height: 1.5 !default;
+// Headings
+%twoFont {
+  font-family: $font-family-two;
+}
+%iconFont {
+  font-family: $icon-font;
+}
+//==============================================================================
+// Borders
+//==============================================================================
+$border-width: 1px !default;
+$border-style: solid !default;
+$border-color: $darkgrey2 !default;
+$border-radius: 0px !default;
+$borders: $border-width $border-style $border-color !default;
+
+//==============================================================================
+// Spacing
+//==============================================================================
+$padding: 1rem !default;
+$margins: 1.5rem !default;
+$content-padding: 30px 0 !default;
+$content-padding-mobile: 30px 0 !default;
+
+//==============================================================================
+// Grid
+//==============================================================================
+$gaps: 30px;
+$grid-columns: 12;
+$breakpoint-prefixes: ("xs", "xm", "sm", "md", "lg");
+$xs-min: 480px !default;
+$xm-min: 600px !default;
+$sm-min: 769px !default;
+$md-min: 992px !default;
+$lg-min: 1300px !default;
+$xm-container: 100%;
+$sm-container: 100%;
+$md-container: 992px;
+$lg-container: 1200px;
+$max-container: 1620px;
+
+//==============================================================================
+// Forms
+//==============================================================================
+$forms: (
+  "[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea"
+) !default;
+$buttons: (
+  ".button, a.button, button, [type=submit], [type=reset], [type=button]"
+) !default;
+$input-background: rgba($lightgrey4, 0.1) !default;
+$input-text: $white !default;
+$placeholder: $white !default;
+$form-border: 1px solid $border-color !default;
+$form-border-hover: 1px solid $border-color !default;
+$form-border-focus: 1px solid $border-color !default;
+$checkbox-background: #ddd;
+$checkbox-border: 1px solid $border-color;
+$checkbox-checked: $white;
+$checkbox-background-checked: $white;
+//==============================================================================
+// Buttons
+//==============================================================================
+$button-background: linear-gradient(
+  90deg,
+  rgb(22, 75, 248) 0%,
+  rgb(23, 52, 180) 100%
+) !default;
+// $button-background: $red !default;
+$button-background-hover: $white !default;
+$button-color: $white !default;
+$button-color-hover: $blue !default;
+$button-font-weight: 700 !default;
+$button-font-family: $font-family !default;
+$button-font-size: 0.9rem !default;
+$button-border-width: 0px !default;
+$button-border-style: solid !default;
+$button-border-color: $grey !default;
+$button-border-color-hover: $black !default;
+$button-border-radius: $border-radius !default;
+$button-text-transform: none !default;

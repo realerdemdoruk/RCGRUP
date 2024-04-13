@@ -1,0 +1,90 @@
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $gaps;
+  padding-left: $gaps;
+  &.full{
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.row {
+  box-sizing: border-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex: 0 1 auto;
+  -webkit-box-flex: 0;
+  flex: 0 1 auto;
+  -ms-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -($gaps/2);
+  margin-left: -($gaps/2);
+}
+
+.row.reverse {
+  flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+}
+
+.col.reverse {
+  flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+}
+
+@for $i from 1 through length($breakpoint-prefixes) {
+  $thisPrefix: nth($breakpoint-prefixes, $i);
+
+  @if $thisPrefix=="xs" {
+    @include col-factory($thisPrefix);
+  }
+
+  @else if $thisPrefix=="xm" {
+    @include xsmall-breakpoint(min) {
+      .container {
+        width: $xm-container;
+      }
+
+      @include col-factory($thisPrefix);
+    }
+  }
+
+  @else if $thisPrefix=="sm" {
+    @include small-breakpoint(min) {
+      .container {
+        width: $sm-container;
+      }
+
+      @include col-factory($thisPrefix);
+    }
+  }
+
+  @else if $thisPrefix=="md" {
+    @include medium-breakpoint(min) {
+      .container {
+        width: $md-container;
+      }
+
+      @include col-factory($thisPrefix);
+    }
+  }
+
+  @else if $thisPrefix=="lg" {
+    @include large-breakpoint(min) {
+      .container {
+        width: $lg-container;
+      }
+
+      @include col-factory($thisPrefix);
+    }
+  }
+}

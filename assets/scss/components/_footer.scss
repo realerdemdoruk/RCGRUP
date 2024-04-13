@@ -1,0 +1,586 @@
+// footer
+footer {
+  @extend %default-content;
+  width: 100%;
+  height: auto;
+  background: {
+    color: $lightblue;
+  }
+
+  .topRow {
+    padding: 40px 0 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    @include small-breakpoint(max) {
+      padding: 45px 0 45px;
+    }
+    .menu {
+      @extend %default-content;
+      width: 100%;
+      ul {
+        @extend %default-content;
+        width: 100%;
+        margin: 0 0 15px 0;
+        padding: 0;
+
+        .contact {
+          span {
+            background-color: red;
+            margin: 0px 10px;
+          }
+          //   display: flex;
+          // margin-left: 10px;
+        }
+        li {
+          @extend %default-content;
+          width: 100%;
+          margin: 0;
+          padding: 0px 0px 12px 0px;
+
+          a {
+            @extend %default-content;
+            font-size: 1.083rem;
+            line-height: 1.5;
+            font-weight: 500;
+            // color: $darkgrey;
+            color: $white;
+            &.big {
+              font-weight: 700;
+              font-size: 1.083rem;
+              line-height: 1.5;
+              padding-bottom: 40px;
+            }
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+    }
+    .footerMail {
+      @extend %default-content;
+      width: 100%;
+      .title {
+        @extend %default-content;
+        width: 100%;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 2.5;
+        // color: $darkgrey;
+        color: $white;
+      }
+      .Content {
+        @extend %default-content;
+        width: 100%;
+        margin-top: 5px;
+
+        .invalid-message {
+          display: none;
+        }
+        span.input {
+          @extend %default-content;
+          width: 100%;
+          // border: 2px solid $grey;
+          border: 0.032rem solid $white2;
+          margin-bottom: 7px;
+          @include border-radius(5px);
+
+          input[type="email"] {
+            display: inline-block;
+            width: 70%;
+            height: auto;
+            border: 0;
+            height: 11px !important;
+
+            border-radius: 0;
+            font-size: 0.875rem;
+            line-height: 2;
+            font-weight: 400;
+
+            background-color: transparent;
+
+            &::-webkit-input-placeholder {
+              color: $lightblue2;
+              opacity: 0.4;
+            }
+            &:-moz-placeholder {
+              color: $grey;
+              opacity: 1;
+            }
+            &:-ms-input-placeholder {
+              color: $grey;
+              opacity: 1;
+            }
+          }
+          button {
+            float: right;
+            width: 10%;
+            height: 50px;
+            margin: 0;
+            background: transparent;
+            color: $grey;
+            // font-size: 16px;
+            font-size: 0, 8894rem;
+            border: 0;
+            &:hover {
+              color: $grey;
+            }
+          }
+          &.has-error {
+            border: 2px solid $error;
+          }
+        }
+        span.checkbox {
+          float: right;
+          input[type="checkbox"] {
+            + label {
+              padding: 0 30px 0 0;
+              color: $grey;
+              font-size: 0.75rem;
+              line-height: 2.3;
+              font-weight: 300;
+              text-align: right !important;
+              @include breakpoint("xs") {
+                font-size: 0.65rem;
+              }
+              &:after {
+                left: auto;
+                right: 0.35rem;
+                border-bottom: 2px solid $grey;
+                border-right: 2px solid $grey;
+              }
+              &:before {
+                left: auto;
+                right: 0;
+                top: 0.1rem;
+                @include border-radius(4px);
+                background: rgba($grey, 0.1);
+                border-radius: 0;
+                border: 0;
+              }
+            }
+          }
+
+          &.has-error {
+            input[type="checkbox"] {
+              + label {
+                &:before {
+                  background: rgba($error, 0.2);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .mail {
+      display: inline-block;
+      width: 100%;
+      height: auto;
+      margin-top: 30px;
+
+      a {
+        @extend %default-content;
+        font-size: 0.875rem;
+        line-height: 2.2;
+        font-weight: 600;
+        color: $white;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .middleRow {
+    padding-top: 40px;
+    padding-bottom: 27px;
+    border-bottom: 1px solid rgba($white, 0.3);
+    .social {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      padding-right: 50px;
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+      span {
+        color: white;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      a {
+        display: inline-block;
+        width: auto;
+        color: white;
+        font-size: 20px;
+        &::before {
+          margin: 0;
+        }
+        &:hover {
+          opacity: 0.6;
+        }
+        @include large-breakpoint(max) {
+          margin-left: 9px;
+          margin-right: 9px;
+        }
+      }
+    }
+    .miniMenu {
+      // display: flex;
+      @extend %default-content;
+      width: 100%;
+      font-size: 0.75rem;
+      line-height: 1.5;
+      font-weight: 500;
+      color: $white;
+      a {
+        @extend %default-content;
+        vertical-align: middle;
+        color: $white;
+        &:hover {
+          opacity: 0.6;
+        }
+        @include xsmall-breakpoint(max) {
+          width: 100%;
+          margin-top: 10px;
+        }
+      }
+      span {
+        @extend %default-content;
+        vertical-align: middle;
+        padding: 0px 15px;
+        @include xsmall-breakpoint(max) {
+          display: none;
+        }
+      }
+    }
+    .logo {
+      @extend %default-content;
+      margin: 5px 10px;
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+  .bottomRow {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    // background-color: white;
+    background-color: white;
+    @include medium-breakpoint(max) {
+      padding-bottom: 40px;
+    }
+
+    .miniMenu {
+      @extend %default-content;
+      width: 100%;
+      font-size: 0, 8894rem;
+      line-height: 1.5;
+      font-weight: 500;
+      color: $grey3;
+      @include large-breakpoint(max) {
+        margin-top: 20px;
+      }
+      a {
+        @extend %default-content;
+        vertical-align: middle;
+        color: $grey3;
+        &:hover {
+          opacity: 0.6;
+        }
+        @include xsmall-breakpoint(max) {
+          width: 100%;
+          margin-top: 10px;
+        }
+      }
+      span {
+        @extend %default-content;
+        vertical-align: middle;
+        padding: 0px 15px;
+        @include xsmall-breakpoint(max) {
+          display: none;
+        }
+      }
+    }
+    .miniMenu2 {
+      display: flex;
+      justify-content: end;
+      font-size: 0, 8894rem;
+
+      @extend %default-content;
+      width: 100%;
+      font-size: 0, 8894rem;
+      line-height: 1.5;
+      font-weight: 400;
+      color: $grey3;
+      @include large-breakpoint(max) {
+        margin-top: 20px;
+      }
+      a {
+        font-size: 0, 8894rem;
+        // @extend %default-content;
+        vertical-align: middle;
+        color: $grey3;
+        // font-size: 0, 8894rem;
+        &:hover {
+          opacity: 0.6;
+        }
+        @include xsmall-breakpoint(max) {
+          width: 100%;
+          margin-top: 10px;
+        }
+      }
+      span {
+        @extend %default-content;
+        vertical-align: middle;
+        padding: 0px 15px;
+        @include xsmall-breakpoint(max) {
+          display: none;
+        }
+      }
+    }
+    .copyright {
+      margin-left: 10px;
+      color: $grey3;
+
+      width: auto;
+      height: auto;
+      font-size: 0, 8894rem;
+      // font-size: 0, 8894rem;
+      font-weight: 400;
+      line-height: 1.5;
+
+      padding: 0;
+      @include small-breakpoint(max) {
+        margin-top: 20px;
+      }
+      @include xsmall-breakpoint(max) {
+        display: block !important;
+      }
+    }
+    .diverseffect {
+      display: inline-block;
+      overflow: hidden;
+      a {
+        display: block;
+        width: 96px;
+        height: 23px;
+        display: block;
+        background-image: url(../svg/diverseffect.svg);
+        background-size: 96px 25px;
+        background-repeat: no-repeat;
+        text-indent: 9999px;
+        margin: 0px;
+        &:hover {
+          opacity: 0.5;
+        }
+        @include medium-breakpoint(max) {
+          margin-top: 20px;
+        }
+        @include xsmall-breakpoint(max) {
+          width: 70px;
+          height: 18px;
+          background-size: 70px 18px;
+        }
+      }
+    }
+  }
+}
+
+// footer-son
+.linkedinBt {
+  position: fixed;
+  right: -69px;
+  top: 220px;
+  width: 163px;
+  height: 34px;
+  background-color: $lightblue;
+  user-select: none;
+  z-index: 9999;
+  @include rotate(-90);
+  @include border-radius(10px 10px 0 0);
+  @include medium-breakpoint(max) {
+    @include rotate(0);
+    bottom: -4px;
+    top: auto;
+    right: auto;
+    left: 50%;
+    margin-left: -146px;
+    transform: scale(0.8, 0.8);
+  }
+  a {
+    position: absolute;
+    width: 163px;
+    height: 34px;
+    z-index: 1;
+    font-size: 0.927rem;
+    font-weight: 700;
+    line-height: 40px;
+    color: $white;
+    text-align: center;
+    &::before {
+      font-size: 20px;
+      margin-left: 0;
+    }
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+.callYou {
+  position: fixed;
+  right: -60px;
+  top: 220px;
+  width: 147px;
+  height: 34px;
+  background-color: $lightblue;
+  user-select: none;
+  z-index: 9999;
+  @include rotate(-90);
+  @include border-radius(10px 10px 0 0);
+  @include medium-breakpoint(max) {
+    @include rotate(0);
+    bottom: -4px;
+    top: auto;
+    right: auto;
+    left: 50%;
+    margin-left: -146px;
+    transform: scale(0.8, 0.8);
+  }
+  a {
+    position: absolute;
+    width: 147px;
+    height: 34px;
+    z-index: 1;
+    font-size: 0.927rem;
+    font-weight: 700;
+    line-height: 40px;
+    color: $white;
+    text-align: center;
+    &::before {
+      font-size: 20px;
+      margin-left: 0;
+    }
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+.linkedinBt {
+  top: 385px;
+  z-index: 9998;
+  background-color: $linkedin;
+
+  @include medium-breakpoint(max) {
+    @include rotate(0);
+    bottom: -4px;
+    top: auto;
+    right: auto;
+    left: 50%;
+    margin-left: -14px;
+    transform: scale(0.8, 0.8);
+  }
+}
+.animated-modal {
+  width: 96%;
+  max-width: 460px !important;
+  border-radius: 4px;
+  overflow: hidden;
+  transform: translateY(-80px);
+  transition: all 0.5s;
+  padding: 30px !important;
+  &#callYouModal {
+    // background: linear-gradient(
+    //   45deg,
+    //   $red 0%,
+    //   darken($red, 10%) 50%,
+    //   darken($red, 20%) 100%
+    // ) !important;
+    background-color: $lightblue;
+    input[type="submit"] {
+      background-color: $darkgrey;
+    }
+  }
+  h2,
+  p,
+  .formCapsule {
+    transform: translateY(-40px);
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-duration: 0.3s;
+
+    .invalid-message {
+      color: $white !important;
+    }
+  }
+  h2 {
+    margin: 0px;
+    padding: 0px 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: $white;
+  }
+  p {
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $white;
+    padding: 0px 10px;
+  }
+  .formCapsule input[type="checkbox"] + label,
+  .formCapsule input[type="radio"] + label {
+    color: $white;
+    // color: $red;
+    a {
+      // color: $red;
+      color: $white;
+      font-weight: 700;
+    }
+  }
+}
+.fancybox-slide--current .animated-modal,
+.fancybox-slide--current .animated-modal h2,
+.fancybox-slide--current .animated-modal p,
+.fancybox-slide--current .animated-modal .formCapsule {
+  transform: translateY(0);
+  opacity: 1;
+  transition-duration: 0.3s;
+}
+.fancybox-slide--current .animated-modal h2 {
+  transition-delay: 0.1s;
+}
+.fancybox-slide--current .animated-modal p {
+  transition-delay: 0.2s;
+}
+.fancybox-slide--current .animated-modal .formCapsule {
+  transition-delay: 0.4s;
+}
+.fancybox-slide--current .animated-modal p:first-of-type {
+  transition-delay: 0.2s;
+}
+.fancybox-slide--html .fancybox-close-small {
+  color: $white;
+  padding: 5px;
+  right: 5px;
+  top: 5px;
+  @include border-radius(100%);
+  border-color: $white;
+}
+
+@media max {
+}
+
+@media (max-width: 768px) {
+  .social {
+    padding-right: 0px !important;
+  }
+
+  // .contact {
+  //   display: flex;
+  //   justify-content: center;
+  // }
+}

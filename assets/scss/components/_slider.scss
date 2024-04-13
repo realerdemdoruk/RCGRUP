@@ -1,0 +1,177 @@
+//Slider
+.homeSlide {
+  overflow: hidden;
+  position: relative;
+
+  .homeSlider {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+
+    .slide {
+      display: block;
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 100px;
+        right: 0;
+        width: 100%;
+        height: 30%;
+        // background: red;
+        // background: red;
+        z-index: 2;
+        @include transition(all 0.5s ease-in-out);
+        @include large-breakpoint(max) {
+          top: 65px;
+        }
+        .sticky & {
+          top: 0;
+        }
+      }
+
+      .textcontainer {
+        display: inline-block;
+        width: 100%;
+        position: relative;
+        z-index: 3;
+
+        .container,
+        .row {
+          height: 100%;
+          & > div {
+            position: relative;
+            z-index: 1;
+
+            h2 {
+              span {
+                color: $darkred;
+              }
+              text-align: left;
+              @extend %default-content;
+              width: 100%;
+              display: block;
+              font-size: 5.5rem;
+              line-height: 1.2;
+              font-weight: 700;
+              color: $white;
+              margin: 0;
+              padding: 0;
+              &::after {
+                display: none;
+              }
+              @include large-breakpoint(max) {
+                font-size: 4rem;
+              }
+              @include medium-breakpoint(max) {
+                font-size: 3rem;
+              }
+              @include xsmall-breakpoint(max) {
+                font-size: 2rem;
+              }
+            }
+
+            p {
+              @extend %default-content;
+              width: 100%;
+              display: block;
+              font-size: 1.4rem;
+              line-height: 1.5;
+              font-weight: 400;
+              color: $white;
+              margin: 20px 0 0 0;
+              padding: 0;
+              @include large-breakpoint(max) {
+                font-size: 1.2rem;
+              }
+              @include medium-breakpoint(max) {
+                font-size: 1rem;
+              }
+              @include small-breakpoint(max) {
+                font-size: 0.8rem;
+              }
+            }
+          }
+        }
+        .row {
+          padding-top: 220px;
+        }
+      }
+      .link {
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+      }
+      .cropcontainer {
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        background: {
+          size: cover;
+          position: center center;
+          repeat: no-repeat;
+        }
+
+        z-index: 1;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          width: 100%;
+          height: 100%;
+          background-color: rgba($black, 0.4);
+        }
+      }
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    z-index: 5;
+    text-align: center;
+    @include medium-breakpoint(max) {
+      bottom: 60px;
+    }
+    li {
+      @extend %default-content;
+      vertical-align: middle;
+      button {
+        @extend %default-content;
+        width: 29px;
+        height: 3px;
+        background-color: rgba($white, 0.5);
+        font-weight: 700;
+        @include border-radius(0);
+        margin-top: 3px;
+      }
+      &.slick-active {
+        button {
+          height: 6px;
+          background-color: rgba($white, 1);
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

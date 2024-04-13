@@ -1,0 +1,131 @@
+// .WhyChooseUs {
+//   padding: 70px 0px;
+//   .images {
+//     @extend %default-content;
+//     width: 100%;
+//     img {
+//       @extend %default-content;
+//       width: 100%;
+//     }
+//   }
+//   h2 {
+//     text-align: center;
+//     color: $white;
+//     font-size: 5.667rem;
+//   }
+
+//   .ww {
+//     .toptext {
+//       margin-top: 97px;
+//       width: 600px;
+//     }
+//     .bottomtext {
+//       margin-top: 120px;
+//     }
+//     display: flex;
+//     flex-wrap: wrap;
+//     a {
+//       font-size: 2.083rem;
+//       color: white;
+//       height: 90px;
+//       min-width: 438.65px !important;
+//       border: 1px solid $red;
+//       background-color: $linkedin;
+//       border-radius: 10px;
+//       span {
+//         font-weight: 700;
+//       }
+//     }
+//   }
+// }
+
+.WhyChooseUs {
+  height: auto;
+  .col-md-4 {
+    display: flex;
+    // justify-content: center;
+    align-items: end;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  // padding: 127px 0px;
+  .row {
+    // display: flex;
+    // align-items: end;
+  }
+
+  // padding: 70px 0px;
+  .wasdwasd {
+    // width: 438px;
+    text-align: center;
+    width: auto;
+    border: 1px solid $white;
+    background-color: $linkedin;
+    border-radius: 10px;
+  }
+  .images {
+    @extend %default-content;
+    width: 100%;
+    img {
+      @extend %default-content;
+      width: 100%;
+    }
+  }
+  h2 {
+    margin-top: 120px;
+    text-align: center;
+    color: $white;
+    font-size: 5.667rem;
+  }
+
+  .ww {
+    padding-bottom: 97px;
+    .toptext {
+      margin-top: 97px;
+      // width: 600px;
+    }
+    .bottomtext {
+      margin-top: 120px;
+      // padding-bottom: 120px;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    a {
+      font-size: 2.083rem;
+      color: white;
+      height: 90px;
+
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .WhyChooseUs {
+    h2 {
+      // font-size: 2.5rem;
+      font-size: 2rem;
+    }
+    .ww {
+      a {
+        font-size: 1.5rem;
+        height: 60px;
+        min-width: 300px !important;
+      }
+      .toptext {
+        margin-top: 50px;
+        width: 100%;
+      }
+      .bottomtext {
+        margin-top: 50px;
+      }
+    }
+  }
+}

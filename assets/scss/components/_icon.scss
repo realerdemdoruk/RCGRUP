@@ -1,0 +1,75 @@
+[class^="icon-"]:before,
+[class*=" icon-"]:before,
+[class^="icons-"]:after,
+[class*=" icons-"]:after {
+  font-family: $icon-font;
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: 0.2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-mail:before {
+  content: "\e800";
+} /* '' */
+.icon-phone:before {
+  content: "\e801";
+} /* '' */
+.icon-twitter:before {
+  content: "\e802";
+} /* '' */
+.icon-search:before {
+  content: "\e803";
+} /* '' */
+.icon-icon01:before {
+  content: "\e804";
+} /* '' */
+.icon-icon02:before {
+  content: "\e805";
+} /* '' */
+.icon-icon03:before {
+  content: "\e806";
+} /* '' */
+.icon-icon04:before {
+  content: "\e807";
+} /* '' */
+.icon-user:before {
+  content: "\e808";
+} /* '' */
+.icon-pencil:before {
+  content: "\e80a";
+} /* '' */
+.icon-cancel:before {
+  content: "\e819";
+} /* '' */
+.icon-right-open:before {
+  content: "\f006";
+} /* '' */
+.icon-left-open:before {
+  content: "\f007";
+} /* '' */
+.icon-location:before {
+  content: "\f031";
+} /* '' */
+.icon-instagram:before {
+  content: "\f16d";
+} /* '' */
+.icon-facebook:before {
+  content: "\f30c";
+} /* '' */
+.icon-linkedin:before {
+  content: "\f318";
+} /* '' */
+
+.icon-phone2:before {
+  content: "\e801";
+} /* '' */

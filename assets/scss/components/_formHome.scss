@@ -1,0 +1,59 @@
+﻿.formHome{
+    .container{
+
+        .p-title{
+            h2{
+                color:$white;
+                &::after{
+                    background-color: $orange;
+                }
+            }
+            p, pre {
+                color:$white;  
+            }
+        }
+        .formCapsule{
+            float: left;
+            width: 100%;
+            height: auto;
+            form{
+                ul{
+                    li{
+                        margin: 15px 0;
+                        position: relative;
+                        @include small-breakpoint("max") {
+                            margin: 8px 0;
+                        }
+                        &.check{
+                            margin: 5px 0;
+                        }
+                        span[class^="icon-"]{
+                            position: absolute;
+                            left: 30px;
+                            top: 13px;
+                            font-size: .875rem;
+                            color: rgba($white,.8);
+                        }
+                        input{
+                            @extend %twoFont;
+                            width: 100%;
+                            padding-left: 45px;
+                        }
+                        textarea{
+                            @extend %twoFont;
+                            width: 100%;
+                            padding-left: 45px;
+                        }
+                        input[type="checkbox"],
+                        input[type="radio"] {
+
+                            + label {
+                                @extend %twoFont;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
