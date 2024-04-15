@@ -1,19 +1,8 @@
 main {
   width: 100%;
   height: auto;
-  margin-top: 134px;
-  @include transition(all 0.5s ease-in-out);
-  @include medium-breakpoint("max") {
-    margin-top: 116px;
-  }
-  @include breakpoint("600px") {
-    margin-top: 80px;
-  }
-  .sticky & {
+  @include small-breakpoint("max") {
     margin-top: 72px;
-    @include breakpoint("600px") {
-      margin-top: 80px;
-    }
   }
 }
 section {

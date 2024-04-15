@@ -208,10 +208,11 @@ footer {
       span {
         color: white;
         margin-left: 20px;
-        margin-right: 20px;
+        margin-right: 23px;
       }
 
       a {
+        padding-left: 0px;
         display: inline-block;
         width: auto;
         color: white;
@@ -418,7 +419,7 @@ footer {
     z-index: 1;
     font-size: 0.927rem;
     font-weight: 700;
-    line-height: 40px;
+    line-height: 33px;
     color: $white;
     text-align: center;
     &::before {
@@ -452,19 +453,31 @@ footer {
   }
   a {
     position: absolute;
-    width: 147px;
+    width: 170px;
     height: 34px;
     z-index: 1;
     font-size: 0.927rem;
     font-weight: 700;
-    line-height: 40px;
+    line-height: 33px;
     color: $white;
     text-align: center;
     &::before {
       font-size: 20px;
       margin-left: 0;
     }
-    &:hover {
+  }
+
+  img {
+    margin-left: 13px;
+    margin-top: 7px;
+    position: absolute;
+  }
+  &:hover {
+    a {
+      opacity: 0.6;
+    }
+
+    img {
       opacity: 0.6;
     }
   }
@@ -583,4 +596,8 @@ footer {
   //   display: flex;
   //   justify-content: center;
   // }
+}
+
+.footerEmail {
+  margin-top: 35px;
 }

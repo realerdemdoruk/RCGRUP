@@ -12,12 +12,11 @@
   .title {
     display: flex;
     align-items: center;
-
     height: 141px;
     background-color: $lightgrey;
-
     span {
       padding-right: 23px;
+      // background-color: red;
     }
 
     h2 {
@@ -48,6 +47,12 @@
             float: left;
             width: 100%;
             height: auto;
+            filter: grayscale(100%);
+            transition: all 0.2s ease-in-out;
+            &:hover {
+              filter: grayscale(0%);
+              transition: all 0.2s ease-in-out;
+            }
           }
           &:hover {
             .p-text {
@@ -63,4 +68,11 @@
       }
     }
   }
+}
+
+.owl-item {
+  display: flex;
+  align-items: center;
+  // justify-content: flex-start;
+  width: 250px !important;
 }
