@@ -8,8 +8,7 @@
 
 .formHome .container .formCapsule form ul li input, .formHome .container .formCapsule form ul li textarea, .formHome .container .formCapsule form ul li input[type="checkbox"] + label,
 .formHome .container .formCapsule form ul li input[type="radio"] + label, .referenceHome .container-fluid a .p-text p,
-.referenceHome .container-fluid a .p-text pre, .whereHome .container .buttons a .p-text p,
-.whereHome .container .buttons a .p-text pre {
+.referenceHome .container-fluid a .p-text pre {
   font-family: "Hind", sans-serif;
 }
 
@@ -234,6 +233,13 @@
   margin-top: 0;
 }
 
+.customerHome hr {
+  background-color: #f8f9fc;
+  height: 1px;
+  border: none;
+  margin-left: 540px;
+}
+
 .customerHome .container-fluid {
   padding: 0px;
 }
@@ -246,7 +252,7 @@
   display: flex;
   align-items: center;
   height: 141px;
-  background-color: #888;
+  background-color: #f8f9fc;
 }
 
 .customerHome .title span {
@@ -989,7 +995,7 @@
 }
 
 .referenceHome .container-fluid .ourReference {
-  background-color: #888;
+  background-color: #f8f9fc;
   height: 141px;
   width: 465px;
   display: flex;
@@ -1026,7 +1032,7 @@
 .referenceHome .container-fluid a .p-text pre {
   font-size: 0.9rem;
   line-height: 1.8;
-  color: #888;
+  color: #f8f9fc;
   font-weight: 400;
   margin-top: 15px;
 }
@@ -1105,6 +1111,7 @@
 }
 
 .whereHome .container .buttons a {
+  border-radius: 5px 5px 5px 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1120,46 +1127,13 @@
   background-color: #0158a2;
 }
 
-.whereHome .container .buttons a .p-text {
-  float: left;
-  width: 100%;
-}
-
-.whereHome .container .buttons a .p-text i {
-  font-size: 1.6rem;
-  color: #313131;
-}
-
-.whereHome .container .buttons a .p-text h3 {
-  font-size: 1rem;
-  color: #313131;
-  margin-top: 20px;
-}
-
-.whereHome .container .buttons a .p-text p,
-.whereHome .container .buttons a .p-text pre {
-  font-size: 0.9rem;
-  line-height: 1.8;
-  color: #888;
-  font-weight: 400;
-  margin-top: 15px;
-}
-
-.whereHome .container .buttons a:hover .p-text i {
-  color: #dda01f;
-}
-
-.whereHome .container .buttons a:hover .p-text h3 {
-  color: #dda01f;
-}
-
 .whereHome .container .p-card {
   width: 100%;
   min-height: 24.25rem;
   border-radius: 24px;
   background-color: #fff;
-  padding: 55px;
-  margin-top: 23px;
+  padding: 40px;
+  margin-top: 20px;
 }
 
 @media only screen and (max-width: 992px) {
@@ -1268,7 +1242,7 @@
   margin: 20px 0 0;
   font-size: 0.9rem;
   line-height: 1.6;
-  color: #8a9196;
+  color: #333841;
 }
 
 @media only screen and (max-width: 992px) {
@@ -1418,7 +1392,7 @@ ul.slick-dots button {
   text-indent: -9999px;
   padding: 0px;
   margin: 0px;
-  background: #888;
+  background: #f8f9fc;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   -khtml-border-radius: 100%;

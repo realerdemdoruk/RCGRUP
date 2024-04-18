@@ -278,7 +278,7 @@ footer {
     .miniMenu {
       @extend %default-content;
       width: 100%;
-      font-size: 0, 8894rem;
+      font-size: 13px !important;
       line-height: 1.5;
       font-weight: 500;
       color: $grey3;
@@ -309,11 +309,11 @@ footer {
     .miniMenu2 {
       display: flex;
       justify-content: end;
-      font-size: 0, 8894rem;
+      font-size: 13px !important;
 
       @extend %default-content;
       width: 100%;
-      font-size: 0, 8894rem;
+      font-size: 13px !important;
       line-height: 1.5;
       font-weight: 400;
       color: $grey3;
@@ -321,7 +321,7 @@ footer {
         margin-top: 20px;
       }
       a {
-        font-size: 0, 8894rem;
+        font-size: 13px !important;
         // @extend %default-content;
         vertical-align: middle;
         color: $grey3;

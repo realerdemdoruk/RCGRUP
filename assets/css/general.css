@@ -6712,6 +6712,10 @@ header .contentRow .topCapsule .topMenu {
   padding-top: 8px;
 }
 
+.sticky header .contentRow .topCapsule .topMenu {
+  padding-top: 0px;
+}
+
 header .contentRow .topCapsule .topMenu .social {
   letter-spacing: -5px;
   margin-top: 8px;
@@ -6751,7 +6755,7 @@ header .contentRow .topCapsule .topMenu .social a.social:hover::before {
 
 header .contentRow .topCapsule .topMenu .mailandphone {
   position: relative;
-  padding: 9px 15px 9px 0;
+  padding: 0px 15px 9px 0;
   margin: 0 30px 0 0;
   border-right: 1px solid rgba(255, 255, 255, 0.3);
   z-index: 10;
@@ -6811,7 +6815,7 @@ header .contentRow .topCapsule .topMenu .socialmedia:hover .menu {
 
 header .contentRow .topCapsule .topMenu .search {
   position: relative;
-  padding: 9px 25px 9px 0;
+  padding: 0px 25px 9px 0;
   margin: 0 25px 0 0;
   z-index: 10;
 }
@@ -6829,7 +6833,7 @@ header .contentRow .topCapsule .topMenu .search a:hover {
 
 header .contentRow .topCapsule .topMenu .language {
   position: relative;
-  padding: 9px 0px 9px 0;
+  padding: 0px 0px 9px 0;
   margin: 0 20px 0 0;
   z-index: 10;
 }
@@ -7135,7 +7139,7 @@ header .contentRowErdem .navCapsule .row ul.nav li .mega-menu {
 }
 
 .sticky header .contentRowErdem .navCapsule .row ul.nav li .mega-menu {
-  background-color: #888;
+  background-color: #f8f9fc;
 }
 
 header .contentRowErdem .navCapsule .row ul.nav li .mega-menu::before {
@@ -7159,7 +7163,7 @@ header .contentRowErdem .navCapsule .row ul.nav li .mega-menu::before {
 }
 
 .sticky header .contentRowErdem .navCapsule .row ul.nav li .mega-menu::before {
-  border-color: rgba(0, 0, 0, 0) #888 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0) #f8f9fc rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
 }
 
 header .contentRowErdem .navCapsule .row ul.nav li .mega-menu.show {
@@ -7217,7 +7221,7 @@ header .contentRowErdem .navCapsule .row .Hamburger {
   background-color: transparent;
   width: auto;
   height: 72px;
-  padding: 16px 30px;
+  padding: 15px 25px;
 }
 
 @media only screen and (max-width: 992px) {
@@ -7870,6 +7874,15 @@ body.search, body.bar {
   opacity: 0.5;
 }
 
+@media (max-width: 1300px) {
+  .contentRow {
+    margin-top: 0px !important;
+  }
+  .sticky .contentRow {
+    margin-top: 0px !important;
+  }
+}
+
 main {
   width: 100%;
   height: auto;
@@ -7974,7 +7987,7 @@ section .p-title pre {
   max-width: 60%;
   font-size: 1rem;
   line-height: 1.8;
-  color: #888;
+  color: #f8f9fc;
   font-weight: 300;
   margin-top: 20px;
 }
@@ -8563,7 +8576,7 @@ footer .bottomRow {
 
 footer .bottomRow .miniMenu {
   width: 100%;
-  font-size: 0, 8894rem;
+  font-size: 13px !important;
   line-height: 1.5;
   font-weight: 500;
   color: #8a9196;
@@ -8605,9 +8618,9 @@ footer .bottomRow .miniMenu span {
 footer .bottomRow .miniMenu2 {
   display: flex;
   justify-content: end;
-  font-size: 0, 8894rem;
+  font-size: 13px !important;
   width: 100%;
-  font-size: 0, 8894rem;
+  font-size: 13px !important;
   line-height: 1.5;
   font-weight: 400;
   color: #8a9196;
@@ -8620,7 +8633,7 @@ footer .bottomRow .miniMenu2 {
 }
 
 footer .bottomRow .miniMenu2 a {
-  font-size: 0, 8894rem;
+  font-size: 13px !important;
   vertical-align: middle;
   color: #8a9196;
 }
@@ -9366,7 +9379,7 @@ ul.slick-dots button {
   text-indent: -9999px;
   padding: 0px;
   margin: 0px;
-  background: #888;
+  background: #f8f9fc;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   -khtml-border-radius: 100%;

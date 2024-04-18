@@ -1,4 +1,12 @@
 ﻿.customerHome {
+  hr {
+    background-color: $lightgrey;
+
+    height: 1px;
+    border: none;
+
+    margin-left: 540px;
+  }
   .container-fluid {
     padding: 0px;
 
@@ -16,7 +24,6 @@
     background-color: $lightgrey;
     span {
       padding-right: 23px;
-      // background-color: red;
     }
 
     h2 {

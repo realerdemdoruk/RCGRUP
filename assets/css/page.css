@@ -19,7 +19,7 @@
   font-size: 0.7rem;
   line-height: 2.2;
   font-weight: 500;
-  color: #888;
+  color: #f8f9fc;
 }
 
 @media only screen and (max-width: 480px) {
@@ -33,7 +33,7 @@
   font-size: 0.7rem;
   line-height: 1.5;
   font-weight: 500;
-  color: #888;
+  color: #f8f9fc;
   padding: 7px 10px;
 }
 
@@ -230,7 +230,7 @@
   color: #000;
   text-align: left;
   position: relative;
-  background-color: #888;
+  background-color: #f8f9fc;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -khtml-border-radius: 10px;
@@ -421,7 +421,7 @@
   width: 100%;
   font-size: .9rem;
   line-height: 1.9;
-  color: #888;
+  color: #f8f9fc;
   font-weight: 400;
   padding: 10px 0;
   margin: 0;
@@ -534,7 +534,7 @@
   letter-spacing: 0;
   font-size: .9rem;
   line-height: 1.9;
-  color: #888;
+  color: #f8f9fc;
   font-weight: 400;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -658,7 +658,7 @@
 .pageContent .container .row.servicesPage div[class^="col-"] .p-item a .p-text p, .pageContent .container .row.servicesPage div[class^="col-"] .p-item a .p-text pre {
   font-size: .9rem;
   line-height: 1.8;
-  color: #888;
+  color: #f8f9fc;
   font-weight: 400;
   margin-top: 15px;
 }
@@ -820,7 +820,7 @@
 .pageContent .container .row.blogPage div[class^="col-"] .p-item a .p-text p, .pageContent .container .row.blogPage div[class^="col-"] .p-item a .p-text pre {
   font-size: .9rem;
   line-height: 1.8;
-  color: #888;
+  color: #f8f9fc;
   font-weight: 400;
   margin-top: 15px;
 }

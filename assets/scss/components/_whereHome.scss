@@ -51,6 +51,7 @@
         color: $grey;
       }
       a {
+        border-radius: 5px 5px 5px 5px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -65,39 +66,6 @@
         margin: 0;
         position: relative;
         background-color: $lightblue;
-
-        .p-text {
-          float: left;
-          width: 100%;
-          i {
-            font-size: 1.6rem;
-            color: $darkgrey;
-          }
-          h3 {
-            font-size: 1rem;
-            color: $darkgrey;
-            margin-top: 20px;
-          }
-          p,
-          pre {
-            @extend %twoFont;
-            font-size: 0.9rem;
-            line-height: 1.8;
-            color: $lightgrey;
-            font-weight: 400;
-            margin-top: 15px;
-          }
-        }
-        &:hover {
-          .p-text {
-            i {
-              color: $orange;
-            }
-            h3 {
-              color: $orange;
-            }
-          }
-        }
       }
     }
     .p-card {
@@ -107,8 +75,8 @@
       min-height: 24.25rem;
       border-radius: 24px;
       background-color: $white;
-      padding: 55px;
-      margin-top: 23px;
+      padding: 40px;
+      margin-top: 20px;
       @include medium-breakpoint("max") {
         padding: 30px 20px;
       }
@@ -187,7 +155,7 @@
         margin: 20px 0 0;
         font-size: 0.9rem;
         line-height: 1.6;
-        color: $grey3;
+        color: $grey;
         @include medium-breakpoint("max") {
           margin: 10px 0 0;
           font-size: 0.8rem;
