@@ -183,23 +183,28 @@ $(function () {
     //müşteri Slider
     customerSlider: function () {
       $("#customerSlider").owlCarousel({
-        loop: false,
+        items: 1,
+        navigation: false,
+        singleItem: true,
+        pagination: true,
+        loop: true,
         autoplay: true,
-        autoplaySpeed: 500,
+        autoplaySpeed: 1500,
         autoplayTimeout: 5000,
         autoplayHoverPause: false,
-        mergeFit: true,
         nav: true,
-        dots: false,
         navText: [
-          '<i class="icon-left-open"></i>',
-          '<i class="icon-right-open"></i>',
+          '<i class="icon-left-open-big"></i>',
+          '<i class="icon-right-open-big"></i>',
         ],
+        dots: false,
+
         responsive: {
           0: {
             items: 1,
             nav: false,
-            dots: true,
+            dots: false,
+            loop: true,
           },
           600: {
             items: 2,
@@ -210,13 +215,19 @@ $(function () {
             items: 3,
             nav: true,
             dots: false,
-            loop: false,
+            loop: true,
           },
           1500: {
             items: 4,
             nav: true,
             dots: false,
-            loop: false,
+            loop: true,
+          },
+          1700: {
+            items: 5,
+            nav: true,
+            dots: false,
+            loop: true,
           },
         },
       });
